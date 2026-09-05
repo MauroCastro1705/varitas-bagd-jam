@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cepuwnsr5ihxq"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_kp8j5"]
+
+[resource]
+script = ExtResource("1_kp8j5")
+item_name = "Poción blanca"
+item_description = "Parece brillar en la oscuridad... ¿Estamos seguros de que es mágica?"
+tags = Array[int]([54, 74, 24])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

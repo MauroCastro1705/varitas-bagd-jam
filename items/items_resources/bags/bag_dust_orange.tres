@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccqjadf4dhpw0"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6w7xx"]
+
+[resource]
+script = ExtResource("1_6w7xx")
+item_name = "Polvos naranjas"
+item_description = "Transmutan objetos y transforman a las personas en otra cosa."
+tags = Array[int]([17, 47, 71])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

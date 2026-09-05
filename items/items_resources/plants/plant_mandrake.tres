@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dcf5x2oyt6y4d"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_gh5dx"]
+
+[resource]
+script = ExtResource("1_gh5dx")
+item_name = "Mandrágora"
+item_description = "La mitología popular afirma que la raíz gritaba al ser arrancada de la tierra y que ese sonido mataba o volvía locos a quienes lo escuchaban."
+tags = Array[int]([50, 44])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

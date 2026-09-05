@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4m2rdscejd3e"]
+
+[ext_resource type="Script" uid="uid://36a5wmov2glr" path="res://escenas/splash/splash.gd" id="1_hyhgb"]
+[ext_resource type="Texture2D" uid="uid://cg4ca8e7gt45x" path="res://assets/your-logo-here-dark.png" id="1_m874p"]
+[ext_resource type="Texture2D" uid="uid://uni8clwyu1y1" path="res://assets/logo_hambre_carmesi.png" id="3_54kj4"]
+
+[node name="Splash" type="Node2D" unique_id=208541036]
+script = ExtResource("1_hyhgb")
+
+[node name="YourLogoHereDark" type="Sprite2D" parent="." unique_id=1018883238]
+position = Vector2(969.01184, 542.5)
+scale = Vector2(0.50533015, 0.50416666)
+texture = ExtResource("1_m874p")
+
+[node name="HambreCarmesi2xPng" type="Sprite2D" parent="." unique_id=256460278]
+position = Vector2(1351, 519)
+texture = ExtResource("3_54kj4")
+
+[node name="Timer" type="Timer" parent="." unique_id=1128892383]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

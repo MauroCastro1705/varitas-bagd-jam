@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ca41b5oa6td7v"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6uhif"]
+
+[resource]
+script = ExtResource("1_6uhif")
+item_name = "Ramas de canela"
+item_description = "La canela es una especia sagrada vinculada con la energía del fuego, la abundancia y la protección."
+tags = Array[int]([50, 10])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

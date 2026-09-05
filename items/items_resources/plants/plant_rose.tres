@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c6kn23tnlvbko"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_mxa1a"]
+[ext_resource type="Texture2D" uid="uid://coj8euw375sva" path="res://assets/items/plant_rose.png" id="2_ebqnx"]
+
+[resource]
+script = ExtResource("1_mxa1a")
+sprite = ExtResource("2_ebqnx")
+item_name = "Pétalos de rosa"
+item_description = "Se usan en la magia esotérica para atraer el amor, limpiar energías y ofrecer protección."
+tags = Array[int]([50, 93])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

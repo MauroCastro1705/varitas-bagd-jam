@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://udjkuq4t02nt"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_nt0jr"]
+[ext_resource type="Texture2D" uid="uid://b0m0kn6dmnb26" path="res://assets/items/gem_diamond.png" id="2_nt0jr"]
+
+[resource]
+script = ExtResource("1_nt0jr")
+sprite = ExtResource("2_nt0jr")
+item_name = "Diamante"
+item_description = "El diamante no es solo la piedra preciosa más dura del mundo, sino un símbolo ancestral de invencibilidad y claridad espiritual. En su esencia, el significado del diamante representa la perfección, la iluminación y el triunfo del espíritu sobre la materia."
+tags = Array[int]([23, 72, 121])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

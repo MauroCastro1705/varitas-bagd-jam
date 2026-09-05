@@ -1,0 +1,251 @@
+[gd_scene format=3 uid="uid://buxo1e66loyly"]
+
+[ext_resource type="Script" uid="uid://dqfiqttuvc2s" path="res://escenas/main_menu/main_menu.gd" id="1_vd368"]
+[ext_resource type="Shader" uid="uid://b7fdd3g627rgn" path="res://shaders/transition.gdshader" id="2_4qipx"]
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="3_4t5pn"]
+[ext_resource type="Theme" uid="uid://bcatblfh2nkib" path="res://themes/menu_button.tres" id="3_uda5e"]
+[ext_resource type="Texture2D" uid="uid://bdajp73qrl4tx" path="res://assets/logo_juego.png" id="5_uda5e"]
+[ext_resource type="Texture2D" uid="uid://coltj0alaak5m" path="res://assets/items/hat_copa01.png" id="6_12aag"]
+[ext_resource type="Texture2D" uid="uid://b7po6dv2mdrk3" path="res://assets/items/wand_wood02.png" id="7_4qipx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oii30"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lmyo"]
+shader = ExtResource("2_4qipx")
+shader_parameter/progress = 0.5
+shader_parameter/speed = 0.1
+shader_parameter/pixelation = Vector2(2, 2)
+shader_parameter/zoom = 2.0
+shader_parameter/background_threshold = 9.49999998667295e-08
+shader_parameter/color_threshold = 0.6670000316825
+shader_parameter/color = Color(0.27450982, 0.12156863, 0.13333334, 1)
+shader_parameter/seed = 0.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckk3t"]
+font = ExtResource("3_4t5pn")
+font_size = 25
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_12aag"]
+offsets = PackedFloat32Array(0.14450867, 0.9653179)
+colors = PackedColorArray(0.97581416, 0.55752563, 0.34229827, 1, 2.028958, 1.4557294, 0.9754564, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5rcss"]
+gradient = SubResource("Gradient_12aag")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7136752, 0.7136752)
+
+[sub_resource type="Animation" id="Animation_xfihy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WandWood02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.6628727]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HatCopa01:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.49752083]
+}
+
+[sub_resource type="Animation" id="Animation_2lmyo"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WandWood02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.0333333, 9.966666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.6628727, -1.0471975511965976, -0.6628727]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HatCopa01:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.233333, 9.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.49752083, 0.8726646259971648, 0.49752083]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xpgkx"]
+_data = {
+&"RESET": SubResource("Animation_xfihy"),
+&"new_animation": SubResource("Animation_2lmyo")
+}
+
+[node name="MainMenu" type="Control" unique_id=405304890]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vd368")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=937212800]
+material = SubResource("ShaderMaterial_oii30")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.105882354, 0.11372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1251269853]
+material = SubResource("ShaderMaterial_2lmyo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19859058, 0.288602, 0.2650781, 1)
+metadata/_edit_lock_ = true
+
+[node name="StartButton" type="Button" parent="." unique_id=1150670714]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.57900006
+anchor_right = 1.0
+anchor_bottom = 0.81200004
+offset_left = 753.0
+offset_top = 21.53595
+offset_right = -841.0
+offset_bottom = -93.104004
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_uda5e")
+text = "jugar
+"
+
+[node name="version" type="Label" parent="." unique_id=2103998420]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 1037.5
+offset_right = -1727.0
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "v  0.0.3"
+label_settings = SubResource("LabelSettings_ckk3t")
+
+[node name="creditos" type="Button" parent="." unique_id=988356707]
+visible = false
+layout_mode = 0
+offset_left = 1490.0
+offset_top = 849.0
+offset_right = 1692.5161
+offset_bottom = 935.0
+theme = ExtResource("3_uda5e")
+text = "Creditos"
+
+[node name="version2" type="Label" parent="." unique_id=2003783936]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 1000.0
+offset_right = -1697.0
+offset_bottom = -33.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BAGD level up JAM - 2026"
+label_settings = SubResource("LabelSettings_ckk3t")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=750695177]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 186.0
+offset_right = 2.0
+offset_bottom = -604.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_uda5e")
+expand_mode = 2
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="HatCopa01" type="Sprite2D" parent="." unique_id=296748639]
+visible = false
+position = Vector2(1389.5454, 182.1818)
+rotation = 0.49752083
+scale = Vector2(0.17823009, 0.1582183)
+texture = ExtResource("6_12aag")
+offset = Vector2(-15.32959, -236.46777)
+
+[node name="WandWood02" type="Sprite2D" parent="." unique_id=1124630997]
+visible = false
+position = Vector2(456, 493.00003)
+rotation = -0.6628727
+scale = Vector2(0.25312492, 0.25312492)
+texture = ExtResource("7_4qipx")
+offset = Vector2(8.7178955, -409.19214)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WandWood02" unique_id=695132453]
+visible = false
+position = Vector2(2.1957397, -1010.71533)
+rotation = 0.6628727
+scale = Vector2(3.9506187, 3.9506187)
+amount = 20
+texture = SubResource("GradientTexture2D_5rcss")
+lifetime = 3.1599999999999997
+explosiveness = 0.5
+emission_shape = 1
+emission_sphere_radius = 20.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 80.0
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.5
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1908022410]
+libraries/ = SubResource("AnimationLibrary_xpgkx")
+autoplay = &"new_animation"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]

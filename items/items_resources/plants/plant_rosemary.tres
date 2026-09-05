@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d3ypod6cyjgvt"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_qbhpx"]
+[ext_resource type="Texture2D" uid="uid://bmnvy67k36esj" path="res://assets/items/plant_rosemary.png" id="2_qa62p"]
+
+[resource]
+script = ExtResource("1_qbhpx")
+sprite = ExtResource("2_qa62p")
+item_name = "Romero"
+item_description = "Se utiliza principalmente como un poderoso escudo de protección, una herramienta de purificación y un estimulante para la claridad mental.f"
+tags = Array[int]([50, 86])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

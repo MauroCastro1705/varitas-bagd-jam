@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bgbmoxh8fk1lj"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_dv44n"]
+
+[resource]
+script = ExtResource("1_dv44n")
+item_name = "Polvos violetas"
+item_description = "Enamoran a las personas."
+tags = Array[int]([17, 55, 85])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://j4gu1og01d4x"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_hwgk8"]
+[ext_resource type="Texture2D" uid="uid://ytw23dpj4in" path="res://assets/items/wand_bone02.png" id="2_jbekf"]
+
+[resource]
+script = ExtResource("1_hwgk8")
+sprite = ExtResource("2_jbekf")
+item_name = "Varita de hueso"
+item_description = "Nunca pelees contra un mago que utiliza huesos - algunos usaron su propia tibia de lo locos que están."
+tags = Array[int]([73, 9])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

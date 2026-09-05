@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://4g3venu3sn0m"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_558he"]
+
+[resource]
+script = ExtResource("1_558he")
+item_name = "Pezuña de cabra"
+item_description = "Muy chica para ser la pezuña de un caballo."
+tags = Array[int]([3, 33, 25])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

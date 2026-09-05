@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://3am3b2giu7w5"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_xelj6"]
+
+[resource]
+script = ExtResource("1_xelj6")
+item_name = "Poción naranja"
+item_description = "Podríamos decir que las pociones naranjas tienen muchas propiedades. "
+tags = Array[int]([54, 47])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

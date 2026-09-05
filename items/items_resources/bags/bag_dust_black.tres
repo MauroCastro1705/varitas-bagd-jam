@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfyqfdrem5rdh"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_0rdlu"]
+
+[resource]
+script = ExtResource("1_0rdlu")
+item_name = "Polvos negros"
+item_description = "Tierra de cementario."
+tags = Array[int]([17, 82, 6])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bxh0evdvevdla"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_nv6ob"]
+
+[resource]
+script = ExtResource("1_nv6ob")
+item_name = "Hojas de belladonna"
+item_description = "Durante la Edad Media, las brujas y los magos mezclaban belladonna con otras plantas tóxicas como el acónito para crear pociones y pomadas."
+tags = Array[int]([50, 95])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

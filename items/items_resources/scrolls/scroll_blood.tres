@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqv17gljq35x1"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_xr2ma"]
+
+[resource]
+script = ExtResource("1_xr2ma")
+item_name = "Pergamino escrito con sangre"
+item_description = "Esto me da mala pinta, está escrito con algo viscoso y oxidado."
+tags = Array[int]([63, 7])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

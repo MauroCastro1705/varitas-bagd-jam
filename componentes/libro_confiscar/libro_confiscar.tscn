@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://bxabtswqtfaql"]
+
+[ext_resource type="Script" uid="uid://bcr75g6jnuccm" path="res://componentes/libro_confiscar/libro_confiscar.gd" id="1_gejhq"]
+[ext_resource type="Material" uid="uid://mqiaf3jhewet" path="res://shaders/outline_2d.tres" id="2_ttyu5"]
+[ext_resource type="Texture2D" uid="uid://baq7lm0mjljde" path="res://assets/UI Assets pack_v.1_st/Book_marron.png" id="3_pl051"]
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="4_yw5p6"]
+[ext_resource type="LabelSettings" uid="uid://bgv57ay45cg4k" path="res://themes/rules_text.tres" id="5_gykh2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2xhj"]
+font = ExtResource("4_yw5p6")
+font_size = 43
+font_color = Color(0.16078432, 0.105882354, 0.043137256, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fmiaf"]
+font = ExtResource("4_yw5p6")
+font_size = 36
+font_color = Color(0.30588236, 0.015686275, 0.003921569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5l70y"]
+font = ExtResource("4_yw5p6")
+font_size = 36
+font_color = Color(0.30732283, 0.015668008, 0.004548982, 1)
+
+[node name="Libro_confiscar" type="Control" unique_id=1926663222]
+layout_mode = 3
+anchor_right = 0.19000001
+anchor_bottom = 0.397
+offset_right = -0.8000183
+offset_bottom = 18.23999
+script = ExtResource("1_gejhq")
+
+[node name="Libro_cerrado" type="NinePatchRect" parent="." unique_id=1616441148]
+texture_filter = 1
+material = ExtResource("2_ttyu5")
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 364.0
+offset_bottom = 449.0
+texture = ExtResource("3_pl051")
+region_rect = Rect2(191, 32, 82, 97)
+
+[node name="Label" type="Label" parent="Libro_cerrado" unique_id=1464576248]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 88.0
+offset_right = 272.0
+offset_bottom = 213.0
+text = "Confiscar
+items"
+label_settings = SubResource("LabelSettings_d2xhj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Libro_abierto" type="NinePatchRect" parent="." unique_id=1644175616]
+visible = false
+texture_filter = 1
+material = ExtResource("2_ttyu5")
+custom_minimum_size = Vector2(655.6, 447)
+layout_mode = 0
+offset_right = 721.0
+offset_bottom = 447.0
+texture = ExtResource("3_pl051")
+region_rect = Rect2(14, 32, 164, 97)
+
+[node name="TextControl" type="Control" parent="Libro_abierto" unique_id=1653827296]
+anchors_preset = 0
+offset_right = 644.0
+offset_bottom = 423.0
+
+[node name="pagina1" type="Label" parent="Libro_abierto/TextControl" unique_id=2011898674]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+custom_maximum_size = Vector2(250, 300)
+layout_mode = 0
+offset_left = 60.0
+offset_top = 76.0
+offset_right = 310.0
+offset_bottom = 361.0
+text = "-varitas
+-pociones
+-mazo de cartas"
+label_settings = ExtResource("5_gykh2")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="pagina2" type="Label" parent="Libro_abierto/TextControl" unique_id=799517704]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+custom_maximum_size = Vector2(250, 300)
+layout_mode = 0
+offset_left = 408.0
+offset_top = 71.0
+offset_right = 658.0
+offset_bottom = 371.0
+text = "
+-bolas de fuego
+-huesos de bebe"
+label_settings = ExtResource("5_gykh2")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="DayTitleLeftLabel" type="Label" parent="Libro_abierto/TextControl" unique_id=544927038]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 14.0
+offset_right = 316.0
+offset_bottom = 72.0
+text = "Objetos a Confiscar"
+label_settings = SubResource("LabelSettings_fmiaf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DayTitleRightLabel" type="Label" parent="Libro_abierto/TextControl" unique_id=1837878229]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 404.0
+offset_top = 14.0
+offset_right = 667.0
+offset_bottom = 72.0
+text = "Objetos a Confiscar"
+label_settings = SubResource("LabelSettings_5l70y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlideButton" type="Button" parent="." unique_id=1091653567]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+toggle_mode = true
+
+[connection signal="mouse_entered" from="SlideButton" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="SlideButton" to="." method="_on_control_mouse_exited"]
+[connection signal="toggled" from="SlideButton" to="." method="_on_slide_button_pressed"]

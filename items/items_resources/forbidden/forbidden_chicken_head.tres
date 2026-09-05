@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://64tkkin4f5l3"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_us1rx"]
+
+[resource]
+script = ExtResource("1_us1rx")
+item_name = "Cabeza de gallina"
+item_description = "Pareciera que le falta algo..."
+tags = Array[int]([22, 112, 3, 111])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

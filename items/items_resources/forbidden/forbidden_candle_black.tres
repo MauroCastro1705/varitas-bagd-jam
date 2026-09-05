@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bcgskul5vfmmo"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_ixyo1"]
+
+[resource]
+script = ExtResource("1_ixyo1")
+item_name = "Vela negra"
+item_description = "Actúa como un canalizador para restringir la voluntad, causar discordia o enviar intenciones dañinas."
+tags = Array[int]([22, 6, 106, 85])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

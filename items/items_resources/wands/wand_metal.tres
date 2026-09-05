@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ieej1g5oq3cr"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6ecoq"]
+[ext_resource type="Texture2D" uid="uid://pb0apuxl0pyv" path="res://assets/items/wand_metal02.png" id="2_8uaue"]
+
+[resource]
+script = ExtResource("1_6ecoq")
+sprite = ExtResource("2_8uaue")
+item_name = "Varita de metal"
+item_description = "Algunos magos dejaron las varitas de madera por algo más útil, ya que al quedarse sin mana se puede arrojar a sus oponentes."
+tags = Array[int]([73, 45])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

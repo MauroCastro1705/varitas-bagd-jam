@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://du6vi02sprgrs"]
+
+[ext_resource type="Script" uid="uid://dwd4vfyfcx3i7" path="res://characters/char.gd" id="1_ppmss"]
+[ext_resource type="Resource" uid="uid://buyotp6yso8gy" path="res://characters/character_resources/jose_luis.tres" id="2_muwa4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_muwa4"]
+
+[node name="Npc" type="Node2D" unique_id=668904447]
+script = ExtResource("1_ppmss")
+data = ExtResource("2_muwa4")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1622029923]
+custom_minimum_size = Vector2(350, 350)
+custom_maximum_size = Vector2(500, 500)
+texture = SubResource("PlaceholderTexture2D_muwa4")
+expand_mode = 5
+stretch_mode = 5

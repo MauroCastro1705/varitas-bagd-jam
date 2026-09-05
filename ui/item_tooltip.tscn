@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://d0dqmng8ibmgr"]
+
+[ext_resource type="Texture2D" uid="uid://dxc8silfycvi4" path="res://assets/kenney ui/panel_brown_dark.png" id="1_3ex0k"]
+[ext_resource type="Script" uid="uid://cs5qw3jo5bn1o" path="res://ui/item_tooltip.gd" id="1_8wsvs"]
+[ext_resource type="FontFile" uid="uid://e0ipbok11e07" path="res://fonts/Seagram tfb.ttf" id="3_3ex0k"]
+[ext_resource type="FontFile" uid="uid://d2lnwsx28c1u" path="res://fonts/VT323-Regular.ttf" id="4_c4e3j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2fe4"]
+texture = ExtResource("1_3ex0k")
+texture_margin_left = 19.0
+texture_margin_top = 21.0
+texture_margin_right = 19.0
+texture_margin_bottom = 19.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4e3j"]
+font = ExtResource("3_3ex0k")
+font_size = 23
+
+[sub_resource type="LabelSettings" id="LabelSettings_41fav"]
+font = ExtResource("4_c4e3j")
+font_size = 20
+
+[node name="ItemTooltip" type="PanelContainer" unique_id=951043355]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = -1
+anchor_right = 0.148
+anchor_bottom = 0.120000005
+offset_right = -0.16000366
+offset_bottom = 0.3999939
+theme_override_styles/panel = SubResource("StyleBoxTexture_e2fe4")
+script = ExtResource("1_8wsvs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=9992221]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=1120730021]
+layout_mode = 2
+text = "awdasdwasdasdasdasd"
+label_settings = SubResource("LabelSettings_c4e3j")
+
+[node name="DescLabel" type="Label" parent="VBoxContainer" unique_id=1548976985]
+custom_minimum_size = Vector2(100, 50)
+custom_maximum_size = Vector2(250, 100)
+layout_mode = 2
+text = "awdasdwasdefwefweafsdfasdfsadfsadfsadfsdf"
+label_settings = SubResource("LabelSettings_41fav")
+autowrap_mode = 3

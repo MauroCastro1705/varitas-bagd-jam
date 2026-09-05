@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://djo1bgmfuy0f5"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_rv2f5"]
+
+[resource]
+script = ExtResource("1_rv2f5")
+item_name = "El anillo único"
+item_description = "Solo uno para gobernarlos a todos."
+tags = Array[int]([60, 45, 22, 14])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

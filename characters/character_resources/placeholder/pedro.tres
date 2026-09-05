@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c716bo51flv41"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_5kk7g"]
+[ext_resource type="Script" uid="uid://drvtr7wwle6py" path="res://characters/char_data.gd" id="2_1j7sn"]
+[ext_resource type="Resource" uid="uid://ccdyabnd31k8i" path="res://items/items_resources/placeholder/libro.tres" id="2_vywqm"]
+[ext_resource type="Resource" uid="uid://wvig3bypj8br" path="res://items/items_resources/placeholder/trebol.tres" id="3_pm3mk"]
+[ext_resource type="Texture2D" uid="uid://dbshqt2qefrxm" path="res://assets/placeholder/char_random 2 (1).png" id="3_vywqm"]
+
+[resource]
+script = ExtResource("2_1j7sn")
+sprite = ExtResource("3_vywqm")
+name = "Carlos"
+item_list = Array[ExtResource("1_5kk7g")]([ExtResource("2_vywqm"), ExtResource("3_pm3mk")])
+dialog = ["Hola, me dicen carlitos", "vengo a una convencion de anime"]
+metadata/_custom_type_script = "uid://drvtr7wwle6py"

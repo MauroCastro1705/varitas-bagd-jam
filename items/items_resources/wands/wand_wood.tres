@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b3m7c4ux6hoxs"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_57rpa"]
+[ext_resource type="Texture2D" uid="uid://b7po6dv2mdrk3" path="res://assets/items/wand_wood02.png" id="2_vr6ix"]
+
+[resource]
+script = ExtResource("1_57rpa")
+sprite = ExtResource("2_vr6ix")
+item_name = "Varita de madera"
+item_description = "Clásica, podría pasar por un palo. Todos la tuvieron."
+tags = Array[int]([73, 76])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

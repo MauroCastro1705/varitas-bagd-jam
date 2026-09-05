@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cbybj5wspya8b"]
+
+[ext_resource type="Script" uid="uid://lrkqs7vb5nxv" path="res://componentes/item_spawner/item_spawner.gd" id="1_w0sbd"]
+[ext_resource type="PackedScene" uid="uid://mmi2bm0him43" path="res://items/item.tscn" id="2_0neqk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
+size = Vector2(686, 425)
+
+[node name="ItemSpawner" type="Node2D" unique_id=937600891 node_paths=PackedStringArray("spawn_area")]
+script = ExtResource("1_w0sbd")
+spawn_area = NodePath("spawn_area")
+item_scene = ExtResource("2_0neqk")
+
+[node name="spawn_area" type="Area2D" parent="." unique_id=89625308]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawn_area" unique_id=1368248492]
+position = Vector2(-3, -14)
+shape = SubResource("RectangleShape2D_yowuo")

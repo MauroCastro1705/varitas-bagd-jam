@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bndaurtmnocxb"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_k4nfk"]
+[ext_resource type="Texture2D" uid="uid://b7po6dv2mdrk3" path="res://assets/items/wand_wood02.png" id="2_sr4q7"]
+
+[resource]
+script = ExtResource("1_k4nfk")
+sprite = ExtResource("2_sr4q7")
+item_name = "Varita blanca y negra"
+item_description = "De cotillón, están por todo Once."
+tags = Array[int]([73, 6, 74])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

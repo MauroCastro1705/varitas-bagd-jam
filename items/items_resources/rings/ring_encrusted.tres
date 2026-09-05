@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://nilixbho10qv"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_k3s3m"]
+
+[resource]
+script = ExtResource("1_k3s3m")
+item_name = "Anillo encrustado con piedras preciosas"
+item_description = "Muy lindo, seguro la piedra este infundida con magia."
+tags = Array[int]([60, 45])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

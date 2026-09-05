@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c3geep5wcr3ap"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_rt8n3"]
+
+[resource]
+script = ExtResource("1_rt8n3")
+item_name = "Huesos de ave"
+item_description = "Similares a un hueso de roedor pero con alas."
+tags = Array[int]([9, 3, 5])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

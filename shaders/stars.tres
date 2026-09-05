@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c587cyuh4g2xn"]
+
+[ext_resource type="Shader" uid="uid://co4j7x77h60ad" path="res://shaders/stars.gdshader" id="1_nb3if"]
+
+[resource]
+shader = ExtResource("1_nb3if")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/bigStarSlow = 0.0
+shader_parameter/mediumStarSlow = 0.0
+shader_parameter/smallStarSlow = 1.0
+shader_parameter/smallStarAmount = 0.001
+shader_parameter/mediumStarAmount = 0.0
+shader_parameter/bigStarAmount = 0.0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cnhdm7hx16lkl"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_wuh8x"]
+
+[resource]
+script = ExtResource("1_wuh8x")
+item_name = "Cannabis"
+item_description = "Se ha utilizado como una herramienta para alterar la conciencia, meditar y conectar con lo sagrado."
+tags = Array[int]([50, 89, 90])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dpva88jlpn7u6"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_t6k3j"]
+[ext_resource type="Texture2D" uid="uid://coltj0alaak5m" path="res://assets/items/hat_copa01.png" id="2_26liq"]
+
+[resource]
+script = ExtResource("1_t6k3j")
+sprite = ExtResource("2_26liq")
+item_name = "Sombrero de copa"
+item_description = "Uh-la-la, señor francés."
+tags = Array[int]([30, 80])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

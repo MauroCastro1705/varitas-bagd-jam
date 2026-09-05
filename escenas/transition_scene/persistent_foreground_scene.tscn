@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ydm88x4beq0r"]
+
+[ext_resource type="Material" uid="uid://364kekwj2p6r" path="res://shaders/transition.tres" id="1_ajf1b"]
+
+[node name="Foreground" type="Control" unique_id=330318654]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="fondo" type="ColorRect" parent="." unique_id=18612553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.20161396, 8.7236984e-08, 0.06775267, 1)
+
+[node name="TransitionEffect" type="ColorRect" parent="." unique_id=283080274]
+material = ExtResource("1_ajf1b")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

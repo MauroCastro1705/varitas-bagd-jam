@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ckg8dnwfl2aio"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_kv7f8"]
+
+[resource]
+script = ExtResource("1_kv7f8")
+item_name = "Pergamino de rayo de hielo"
+item_description = "Te congela los vasitos de fernet. Clave."
+tags = Array[int]([63, 37])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

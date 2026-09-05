@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://65p528bfp3nr"]
+
+[ext_resource type="Shader" uid="uid://b7fdd3g627rgn" path="res://shaders/transition.gdshader" id="1_jr4fe"]
+[ext_resource type="Script" uid="uid://d2axhex68ciim" path="res://escenas/creditos/creditos.gd" id="1_twurm"]
+[ext_resource type="FontFile" uid="uid://d2lnwsx28c1u" path="res://fonts/VT323-Regular.ttf" id="3_hgkxa"]
+[ext_resource type="Theme" uid="uid://bcatblfh2nkib" path="res://themes/menu_button.tres" id="3_pv1q0"]
+[ext_resource type="FontFile" uid="uid://xuclhhrmimfb" path="res://fonts/Gamerock Personal Use Only.ttf" id="5_s07p0"]
+[ext_resource type="Texture2D" uid="uid://coltj0alaak5m" path="res://assets/items/hat_copa01.png" id="6_0ctx6"]
+[ext_resource type="Texture2D" uid="uid://b7po6dv2mdrk3" path="res://assets/items/wand_wood02.png" id="7_1r1c7"]
+[ext_resource type="Texture2D" uid="uid://bdajp73qrl4tx" path="res://assets/logo_juego.png" id="8_1r1c7"]
+[ext_resource type="Texture2D" uid="uid://uni8clwyu1y1" path="res://assets/logo_hambre_carmesi.png" id="9_s07p0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twurm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p63js"]
+shader = ExtResource("1_jr4fe")
+shader_parameter/progress = 0.5
+shader_parameter/speed = 0.1
+shader_parameter/pixelation = Vector2(2, 2)
+shader_parameter/zoom = 2.0
+shader_parameter/background_threshold = 9.49999998667295e-08
+shader_parameter/color_threshold = 0.6670000316825
+shader_parameter/color = Color(0.27450982, 0.12156863, 0.13333334, 1)
+shader_parameter/seed = 0.1
+
+[sub_resource type="Gradient" id="Gradient_12aag"]
+offsets = PackedFloat32Array(0.14450867, 0.9653179)
+colors = PackedColorArray(0.97581416, 0.55752563, 0.34229827, 1, 2.028958, 1.4557294, 0.9754564, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s07p0"]
+gradient = SubResource("Gradient_12aag")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7136752, 0.7136752)
+
+[sub_resource type="Animation" id="Animation_xfihy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WandWood02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.6628727]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HatCopa01:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.49752083]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2lmyo"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WandWood02:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.0333333, 9.966666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.6628727, -1.0471975511965976, -0.6628727]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HatCopa01:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.233333, 9.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.49752083, 0.8726646259971648, 0.49752083]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.9, 10),
+"transitions": PackedFloat32Array(1, 2.639016, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txuiw"]
+_data = {
+&"RESET": SubResource("Animation_xfihy"),
+&"new_animation": SubResource("Animation_2lmyo")
+}
+
+[node name="Creditos" type="Node2D" unique_id=1178054616]
+script = ExtResource("1_twurm")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=510843980]
+material = SubResource("ShaderMaterial_twurm")
+custom_minimum_size = Vector2(50, 50)
+offset_left = -2.0
+offset_right = 1935.0
+offset_bottom = 1094.0
+color = Color(0.0627451, 0.105882354, 0.11372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1121452805]
+material = SubResource("ShaderMaterial_p63js")
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 1929.0
+offset_bottom = 1093.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19859058, 0.288602, 0.2650781, 1)
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1186148495]
+offset_left = 1676.0
+offset_top = 897.0
+offset_right = 1886.0
+offset_bottom = 1034.0
+theme = ExtResource("3_pv1q0")
+text = "Volver"
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1681729867]
+offset_left = 622.0
+offset_top = 5.0
+offset_right = 1322.0
+offset_bottom = 1079.0
+theme_override_fonts/normal_font = ExtResource("3_hgkxa")
+theme_override_fonts/bold_font = ExtResource("5_s07p0")
+theme_override_font_sizes/normal_font_size = 31
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[color=#87CEEB][b]Programación / Implementación[/b][/color]
+[color=#FFFFFF]Fran Pintar[/color] | [color=#FFFFFF]Mauro Castro[/color]
+
+[color=#98FB98][b]Narrativa[/b][/color]
+[color=#FFFFFF]Esmeralda[/color] | [color=#FFFFFF]Rodrigo[/color]
+
+[color=#FFB6C1][b]Game Design[/b][/color]
+[color=#FFFFFF]Valentino[/color] | [color=#FFFFFF]Lena[/color] | [color=#FFFFFF]El arte[/color]
+
+[color=#DDA0DD][b]Level Design[/b][/color]
+[color=#FFFFFF]Valentino[/color] | [color=#FFFFFF]Rodrigo[/color]
+
+[color=#F0E68C][b]Arte[/b][/color]
+[color=#FFFFFF]El arte[/color]
+
+[color=#808080] agradecimientos especiales a todo el equipo de BAGD [/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="RichTextLabel" parent="." unique_id=129055350]
+offset_left = 987.0
+offset_top = 402.0
+offset_right = 1481.0
+offset_bottom = 884.0
+text = "
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HatCopa01" type="Sprite2D" parent="." unique_id=1727898013]
+position = Vector2(340, 854)
+rotation = 0.49752083
+scale = Vector2(0.17823009, 0.1582183)
+texture = ExtResource("6_0ctx6")
+offset = Vector2(-15.32959, -236.46777)
+
+[node name="WandWood02" type="Sprite2D" parent="." unique_id=1044979213]
+position = Vector2(1661, 462.00003)
+rotation = -0.6628727
+scale = Vector2(0.25312492, 0.25312492)
+texture = ExtResource("7_1r1c7")
+offset = Vector2(8.7178955, -409.19214)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WandWood02" unique_id=2126351983]
+position = Vector2(2.1957397, -1010.71533)
+rotation = 0.6628727
+scale = Vector2(3.9506187, 3.9506187)
+amount = 20
+texture = SubResource("GradientTexture2D_s07p0")
+lifetime = 3.1599999999999997
+explosiveness = 0.5
+emission_shape = 1
+emission_sphere_radius = 20.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 80.0
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.5
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1005318127]
+libraries/ = SubResource("AnimationLibrary_txuiw")
+autoplay = &"new_animation"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1961127932]
+custom_minimum_size = Vector2(80, 80)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = -92.0
+offset_right = 571.0
+offset_bottom = 367.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(229, 174)
+texture = ExtResource("8_1r1c7")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HambreCarmesi2xPng" type="Sprite2D" parent="." unique_id=477041698]
+position = Vector2(333, 365.99997)
+scale = Vector2(0.45360824, 0.45360827)
+texture = ExtResource("9_s07p0")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

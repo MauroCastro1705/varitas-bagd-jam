@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dl8ui3gvemq7c"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_gw8f0"]
+
+[resource]
+script = ExtResource("1_gw8f0")
+item_name = "La llegada del Señor Oscuro"
+item_description = "Vinieron hasta La Pampa para esconderse, solo puede significar que él vuelve."
+tags = Array[int]([63, 14])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

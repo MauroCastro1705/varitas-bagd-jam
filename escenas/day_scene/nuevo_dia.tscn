@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://0517e8vaixgt"]
+
+[ext_resource type="Script" uid="uid://b4lhciduwpcie" path="res://escenas/day_scene/nuevo_dia.gd" id="1_afb8v"]
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="2_qee1e"]
+[ext_resource type="FontFile" uid="uid://e0ipbok11e07" path="res://fonts/Seagram tfb.ttf" id="3_rdagm"]
+
+[sub_resource type="Gradient" id="Gradient_qee1e"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.84033614)
+colors = PackedColorArray(0, 0, 0, 1, 0.028986681, 0.028986681, 0.028986681, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yowuo"]
+gradient = SubResource("Gradient_qee1e")
+
+[sub_resource type="Shader" id="Shader_h3e0d"]
+code = "shader_type canvas_item;
+
+uniform float progress = 0.0;
+uniform float speed = 0.1; 
+
+uniform vec2 pixelation = vec2(2.0, 2.0);
+uniform float zoom = 2.0;
+
+uniform float background_threshold : hint_range(-2.0, 1.0) = 0.0;
+uniform float color_threshold : hint_range(0.0, 1.0)  = 0.24;
+
+uniform vec4 color : source_color = vec4(0.0, 0.0, 0.0, 1.0); 
+
+uniform float seed = 0.0;
+
+#define iTime (TIME * speed - seed)
+
+const mat2 mtx = mat2( vec2(0.80, -0.60), vec2(0.60, 0.80) );
+
+float rand(vec2 n) { 
+    return fract(sin(dot(n, vec2(12.9898 + seed, 4.1414 - seed))) * (43758.5453 + seed * 1000.0));
+}
+
+float noise(vec2 p){
+    vec2 ip = floor(p);
+    vec2 u = fract(p);
+    u = u * u * (3.0 - 2.0 * u);
+
+    float res = mix(
+        mix(rand(ip), rand(ip + vec2(1.0, 0.0)), u.x),
+        mix(rand(ip + vec2(0.0, 1.0)), rand(ip + vec2(1.0, 1.0)), u.x), u.y);
+        
+    return res * res;
+}
+
+float fbm( vec2 p )
+{
+    float f = 0.0;
+    
+    f += 0.500000 * noise( p + iTime ); p = mtx * p * 2.02;
+    f += 0.031250 * noise( p ); p = mtx * p * 2.01;
+    f += 0.250000 * noise( p ); p = mtx * p * 2.03;
+    f += 0.125000 * noise( p ); p = mtx * p * 2.01;
+    f += 0.062500 * noise( p ); p = mtx * p * 2.04;
+    f += 0.015625 * noise( p + sin(iTime) );
+
+    return f / 0.96875;
+}
+
+float pattern( in vec2 p )
+{
+	return fbm( p + fbm( p + fbm( p ) ) );
+}
+
+vec4 colormap(float x, vec2 uv) {
+	
+	x *= max(0.0, min(-abs(progress * 4.0 - uv.x - uv.y - 1.0) + 1.0, 1.0) * 2.0);
+    
+    if (x < background_threshold) { 
+        return vec4(0.0, 0.0, 0.0, 0.0);
+    }
+    else if (x < color_threshold) { 
+        return mix(
+			vec4(0.0, 0.0, 0.0, 0.0),
+			color,
+			round((x - background_threshold) / (color_threshold - background_threshold))
+		);
+    }
+	else {
+		return color;
+	}
+}
+
+void fragment()
+{
+	vec2 modifier = 1.0/(SCREEN_PIXEL_SIZE * pixelation);
+	vec2 uv = floor(UV * modifier) / modifier;
+	float shade = pattern(uv * zoom);
+	COLOR = colormap(shade, uv);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qee1e"]
+shader = SubResource("Shader_h3e0d")
+shader_parameter/progress = 0.2
+shader_parameter/speed = 0.3
+shader_parameter/pixelation = Vector2(2, 2)
+shader_parameter/zoom = 2.0
+shader_parameter/background_threshold = 0.254000107065
+shader_parameter/color_threshold = 0.24
+shader_parameter/color = Color(0.83627665, 0.72605395, 0.665491, 0.047058824)
+shader_parameter/seed = 0.2
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqnev"]
+font = ExtResource("2_qee1e")
+font_size = 64
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a0prx"]
+font = ExtResource("3_rdagm")
+font_size = 84
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="NuevoDia" type="Node2D" unique_id=1169753006]
+script = ExtResource("1_afb8v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=268146392]
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 1940.0
+offset_bottom = 1100.0
+color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="TextureRect" parent="." unique_id=565603358]
+offset_left = -29.07959
+offset_top = 1101.0
+offset_right = 1279.5297
+offset_bottom = 3063.1592
+rotation = -1.5707964
+texture = SubResource("GradientTexture1D_yowuo")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1766032095]
+material = SubResource("ShaderMaterial_qee1e")
+offset_right = 1976.0
+offset_bottom = 1117.0
+metadata/_edit_lock_ = true
+
+[node name="dia" type="Label" parent="." unique_id=118643157]
+offset_top = 243.0
+offset_right = 1921.0
+offset_bottom = 386.0
+theme_override_font_sizes/font_size = 50
+text = "Lunes - Dia 1"
+label_settings = SubResource("LabelSettings_jqnev")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fecha" type="Label" parent="." unique_id=1113406973]
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 1925.0
+offset_bottom = 289.0
+theme_override_font_sizes/font_size = 50
+text = "25 de agosto de 1994"
+label_settings = SubResource("LabelSettings_a0prx")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=666263849]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

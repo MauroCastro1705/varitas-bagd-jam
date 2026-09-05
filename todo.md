@@ -1,0 +1,25 @@
+- cada personaje es un objeto Character definido por un Resource (fran)
+	- tiene un sprite
+	- tiene un nombre
+	- tiene un diálogo
+	- tiene el listado de los magicalitems que va a poner en la mesa
+- cada objeto mágico tiene un Resource MagicalItem que tiene (fran)
+	- sprite
+	- sfx
+	- vfx
+	- nombre
+	- descripción
+- lista de objetos permitidos y no permitidos del día (fran)
+- cada día es un Resource de tipo Day (fran)
+	- tiene número de día
+	- data de transición (imagen, assets, tiempo de vida)
+- llevar la cuenta de cantidad de fallos (fran)
+	- un fallo es admitir a alguien que no debía pasar, no admitir a alguien que sí, no confiscar a quien se debía
+- evaluar los MagicItems que se intentan pasar contra la lista de admitidos del día
+- shader de outline customizable (mauro)
+- particulas para los objetos (mauro)
+- hacer interacción con los objetos (fran)
+	- moverlos y que tengan sombra, colisionen, etc
+- hacer spawneo de objetos (mauro)
+	- se abre un portalcito arriba y caen sobre la mesa, haciendo quilombito y quedan esparcidos
+- sistema de diálogo para que cada personaje hable (mauro)

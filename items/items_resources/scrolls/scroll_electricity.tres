@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d0wt36jwmsy7f"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_s68nd"]
+
+[resource]
+script = ExtResource("1_s68nd")
+item_name = "Pergamino de electricidad"
+item_description = "Si lo usás para cargar el celular puede explotar. Es algo peligroso en personas, seguro."
+tags = Array[int]([63, 18])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

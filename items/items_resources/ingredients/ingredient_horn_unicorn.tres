@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://fx6b6s2bveu8"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_32557"]
+[ext_resource type="Texture2D" uid="uid://doae8hpt6htuw" path="res://assets/items/animal_unihorn.png" id="2_jrbpt"]
+
+[resource]
+script = ExtResource("1_32557")
+sprite = ExtResource("2_jrbpt")
+item_name = "Cuerno de unicornio"
+item_description = "Pagarían muy bien por uno de estos cuernos en el mercado negro."
+tags = Array[int]([3, 34, 81])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

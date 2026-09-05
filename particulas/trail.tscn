@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bcnwb7ldvxvq0"]
+
+[sub_resource type="Gradient" id="Gradient_pblhj"]
+offsets = PackedFloat32Array(0.40336135, 0.6069364)
+colors = PackedColorArray(5.950118e-06, 0.9875225, 1.061812, 1, 0.93333334, 0.93333334, 0.93333334, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kb0j2"]
+gradient = SubResource("Gradient_pblhj")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.23076923, 0.32478634)
+
+[node name="CPUParticles2D" type="CPUParticles2D" unique_id=470647072]
+amount = 10
+texture = SubResource("GradientTexture2D_kb0j2")
+randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -200)
+initial_velocity_min = 73.8
+initial_velocity_max = 73.8
+angular_velocity_min = 196.82
+angular_velocity_max = 196.82
+linear_accel_min = 1.0
+linear_accel_max = 5.0
+tangential_accel_min = 1.0
+tangential_accel_max = 5.0
+damping_min = 20.0
+damping_max = 50.0
+angle_min = 5.0
+angle_max = 10.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+color = Color(2.343606, 3.5884378, 11.380162, 1)

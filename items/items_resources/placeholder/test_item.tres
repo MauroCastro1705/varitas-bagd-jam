@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://jkcbehcsfcd1"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_j6h3p"]
+[ext_resource type="Texture2D" uid="uid://dpvpyodthy2yl" path="res://icon.svg" id="2_wiu1i"]
+[ext_resource type="PackedScene" uid="uid://bcnwb7ldvxvq0" path="res://particulas/trail.tscn" id="3_wiu1i"]
+
+[resource]
+script = ExtResource("1_j6h3p")
+sprite = ExtResource("2_wiu1i")
+vfx = ExtResource("3_wiu1i")
+item_name = "Huesito de pollo"
+item_description = "Es un huesito de pollo"
+tags = Array[int]([1, 2])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

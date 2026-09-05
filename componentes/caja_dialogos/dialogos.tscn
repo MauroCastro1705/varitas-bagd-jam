@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://jcwcnqodggs2"]
+
+[ext_resource type="Script" uid="uid://coexvtg5ikh0i" path="res://componentes/caja_dialogos/dialogos.gd" id="1_h784s"]
+[ext_resource type="Texture2D" uid="uid://vicpufdeuy01" path="res://assets/UI Assets pack_v.1_st/Book.png" id="2_vqega"]
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="3_vqega"]
+[ext_resource type="Theme" uid="uid://u17ow2y57tq3" path="res://themes/dialogos_textos.tres" id="3_y4hk6"]
+[ext_resource type="Theme" uid="uid://cbu1ppbp5g1gk" path="res://themes/boton_generico.tres" id="5_va38d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_va38d"]
+font = ExtResource("3_vqega")
+font_size = 30
+font_color = Color(0.105882354, 0.0627451, 0.02745098, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Dialogos" type="Control" unique_id=2038885928]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h784s")
+
+[node name="panel" type="NinePatchRect" parent="." unique_id=1708790754]
+layout_mode = 0
+offset_right = 412.0
+offset_bottom = 146.0
+region_rect = Rect2(145, 161, 46, 46)
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
+
+[node name="ColorRect" type="ColorRect" parent="panel" unique_id=1199821065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.86786634, 0.7472671, 0.56869304, 1)
+
+[node name="outline" type="NinePatchRect" parent="panel" unique_id=1959437571]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vqega")
+region_rect = Rect2(145, 161, 46, 46)
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 11
+patch_margin_bottom = 11
+
+[node name="MarginContainer" type="MarginContainer" parent="panel" unique_id=877126002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 5.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panel/MarginContainer" unique_id=308168555]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="npc_name" type="Label" parent="panel/MarginContainer/VBoxContainer" unique_id=1075353626]
+unique_name_in_owner = true
+layout_mode = 2
+text = "caconidas"
+label_settings = SubResource("LabelSettings_va38d")
+vertical_alignment = 1
+
+[node name="dialogo" type="RichTextLabel" parent="panel/MarginContainer/VBoxContainer" unique_id=1615942756]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+theme = ExtResource("3_y4hk6")
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("3_vqega")
+theme_override_font_sizes/normal_font_size = 31
+text = "aaaaaaaaaaaaaaaaaaaaa
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panel/MarginContainer/VBoxContainer" unique_id=1164808153]
+layout_mode = 2
+alignment = 2
+
+[node name="next" type="Button" parent="." unique_id=1239628149]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 0
+offset_left = 333.0
+offset_top = 126.0
+offset_right = 609.6666
+offset_bottom = 256.0
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("5_va38d")
+theme_override_font_sizes/font_size = 70
+text = "siguiente"
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]

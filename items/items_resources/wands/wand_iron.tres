@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://crngxd0st3w8e"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_1a18r"]
+[ext_resource type="Texture2D" uid="uid://pb0apuxl0pyv" path="res://assets/items/wand_metal02.png" id="2_uxgbb"]
+
+[resource]
+script = ExtResource("1_1a18r")
+sprite = ExtResource("2_uxgbb")
+item_name = "Varita de hierro"
+item_description = "Hay quienes dicen que fue hecha con la sangre de los caídos en batalla... pero son sólo mitos."
+tags = Array[int]([73, 79])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

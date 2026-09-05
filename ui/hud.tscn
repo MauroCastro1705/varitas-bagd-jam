@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d3rvcom1mf2i8"]
+
+[ext_resource type="PackedScene" uid="uid://d0dqmng8ibmgr" path="res://ui/item_tooltip.tscn" id="1_rbyyf"]
+
+[node name="HUD" type="CanvasLayer" unique_id=101725470]
+
+[node name="ItemTooltip" parent="." unique_id=1431896388 instance=ExtResource("1_rbyyf")]
+visible = false

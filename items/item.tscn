@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://mmi2bm0him43"]
+
+[ext_resource type="Script" uid="uid://bbuwui0hr6gn" path="res://items/item.gd" id="1_pxpuq"]
+[ext_resource type="Resource" uid="uid://jkcbehcsfcd1" path="res://items/items_resources/placeholder/test_item.tres" id="2_buahv"]
+
+[node name="Item" type="Node2D" unique_id=1982616256 groups=["items"]]
+script = ExtResource("1_pxpuq")
+data = ExtResource("2_buahv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1060736633]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=993237171]
+collision_layer = 256
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=753421607]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dob4arxvqpya4"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_havbc"]
+[ext_resource type="Resource" uid="uid://b3m7c4ux6hoxs" path="res://items/items_resources/wands/wand_wood.tres" id="2_lwkko"]
+[ext_resource type="Script" uid="uid://drvtr7wwle6py" path="res://characters/char_data.gd" id="2_o4j81"]
+[ext_resource type="Resource" uid="uid://kt7xf50bbluj" path="res://items/items_resources/potions/potion_purple.tres" id="3_bypkh"]
+[ext_resource type="Texture2D" uid="uid://dbs2mu1dqht7v" path="res://assets/placeholder/char_random5.png" id="5_0icn2"]
+
+[resource]
+script = ExtResource("2_o4j81")
+sprite = ExtResource("5_0icn2")
+name = "Paulo"
+item_list = Array[ExtResource("1_havbc")]([ExtResource("2_lwkko"), ExtResource("3_bypkh")])
+metadata/_custom_type_script = "uid://drvtr7wwle6py"

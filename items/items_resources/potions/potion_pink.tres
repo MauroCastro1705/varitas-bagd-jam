@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bk61tkif0yl5w"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_tghlu"]
+
+[resource]
+script = ExtResource("1_tghlu")
+item_name = "Poción rosa"
+item_description = "Poción para que dos personas sean felices por siempre y para siempre."
+tags = Array[int]([54, 49, 42])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

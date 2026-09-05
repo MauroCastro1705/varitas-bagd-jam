@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c5mvkwteqcq15"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_nhij0"]
+
+[resource]
+script = ExtResource("1_nhij0")
+item_name = "Pelos de origen humano"
+item_description = "Me apiado del alma que reciba este maleficio."
+tags = Array[int]([22, 36, 117])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

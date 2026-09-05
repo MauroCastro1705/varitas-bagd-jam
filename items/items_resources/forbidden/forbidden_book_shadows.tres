@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://tivovp6l5n3i"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6ndsx"]
+
+[resource]
+script = ExtResource("1_6ndsx")
+item_name = "Libro de las sombras"
+item_description = "Está maldito, podés escuchar cómo te susurra..."
+tags = Array[int]([22, 108, 107])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

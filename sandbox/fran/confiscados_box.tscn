@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cdku52qkf50uo"]
+
+[ext_resource type="Script" uid="uid://utwsgq1aixx6" path="res://sandbox/fran/confiscados_box.gd" id="1_25hry"]
+[ext_resource type="PackedScene" uid="uid://v38vekhgkavn" path="res://systems/interaction/drop_socket.tscn" id="1_abpa4"]
+[ext_resource type="Texture2D" uid="uid://ckdmblxbtn7f3" path="res://assets/placeholder/caja.png" id="2_kb0j2"]
+[ext_resource type="Texture2D" uid="uid://d1krdcj1xuhcj" path="res://assets/kenney ui/panel_brown_corners_a.png" id="4_k24bq"]
+[ext_resource type="FontFile" uid="uid://e0ipbok11e07" path="res://fonts/Seagram tfb.ttf" id="5_4rdcw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rcss"]
+texture = ExtResource("4_k24bq")
+texture_margin_left = 33.0
+texture_margin_top = 42.0
+texture_margin_right = 33.0
+texture_margin_bottom = 35.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3kdh6"]
+font = ExtResource("5_4rdcw")
+font_size = 65
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ConfiscadosBox" type="Node2D" unique_id=1450402941]
+script = ExtResource("1_25hry")
+
+[node name="TextureRect" type="Sprite2D" parent="." unique_id=1280331957]
+process_mode = 4
+modulate = Color(0.53098965, 0.17542577, 0.08614249, 1)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_kb0j2")
+metadata/_edit_lock_ = true
+
+[node name="DropSocket" parent="." unique_id=2030778956 instance=ExtResource("1_abpa4")]
+position = Vector2(-96, -192)
+
+[node name="DropSocket2" parent="." unique_id=1364070280 instance=ExtResource("1_abpa4")]
+position = Vector2(96, -192)
+
+[node name="DropSocket3" parent="." unique_id=1848511703 instance=ExtResource("1_abpa4")]
+position = Vector2(-96, 0)
+
+[node name="DropSocket4" parent="." unique_id=1371775543 instance=ExtResource("1_abpa4")]
+position = Vector2(96, 0)
+
+[node name="DropSocket5" parent="." unique_id=2082069615 instance=ExtResource("1_abpa4")]
+position = Vector2(-96, 192)
+
+[node name="DropSocket6" parent="." unique_id=526759826 instance=ExtResource("1_abpa4")]
+position = Vector2(96, 192)
+
+[node name="Panel" type="Panel" parent="." unique_id=1293296935]
+self_modulate = Color(0.9965258, 0.8729207, 0.7875714, 1)
+offset_left = -95.0
+offset_top = 259.0
+offset_right = 293.0
+offset_bottom = 387.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5rcss")
+
+[node name="Label" type="Label" parent="Panel" unique_id=691761221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Confiscados"
+label_settings = SubResource("LabelSettings_3kdh6")
+horizontal_alignment = 1
+vertical_alignment = 1

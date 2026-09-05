@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dciwwin1n1dvn"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_xjojc"]
+
+[resource]
+script = ExtResource("1_xjojc")
+item_name = "Pergamino de curación"
+item_description = "Se dice que tiene propiedades curativas."
+tags = Array[int]([63, 31])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

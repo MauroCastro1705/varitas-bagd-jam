@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://kd0jpwcw426y"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_rpcbj"]
+
+[resource]
+script = ExtResource("1_rpcbj")
+item_name = "Polvos rojos"
+item_description = "Convierten cualquier objeto en inflamable."
+tags = Array[int]([17, 57, 83])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

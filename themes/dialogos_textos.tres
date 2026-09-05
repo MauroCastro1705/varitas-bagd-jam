@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://u17ow2y57tq3"]
+
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="1_vf8t7"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(0.10561497, 0.06226679, 0.02780845, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 0)
+RichTextLabel/font_sizes/normal_font_size = 9
+RichTextLabel/fonts/normal_font = ExtResource("1_vf8t7")

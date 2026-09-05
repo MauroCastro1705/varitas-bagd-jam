@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dskrwbfgqqrie"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_ggoah"]
+
+[resource]
+script = ExtResource("1_ggoah")
+item_name = "Cola de gato"
+item_description = "Es una cola. Pertenecía a un gato."
+tags = Array[int]([22, 69, 3, 110])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

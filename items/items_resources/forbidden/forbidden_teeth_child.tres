@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b0iwfmcvfwy7l"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6y3bm"]
+
+[resource]
+script = ExtResource("1_6y3bm")
+item_name = "Dientes de infante"
+item_description = "¿Por qué... simplemente por qué harías eso, loquito?"
+tags = Array[int]([22, 9, 115, 116])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccg7uup4ghkan"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_047my"]
+[ext_resource type="Texture2D" uid="uid://pb0apuxl0pyv" path="res://assets/items/wand_metal02.png" id="2_27yka"]
+
+[resource]
+script = ExtResource("1_047my")
+sprite = ExtResource("2_27yka")
+item_name = "Varita de oro"
+item_description = "Sólo los locos usan el oro para las varitas... o los que les gusta presumir."
+tags = Array[int]([73, 26])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

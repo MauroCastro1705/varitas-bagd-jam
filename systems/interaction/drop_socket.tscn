@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://v38vekhgkavn"]
+
+[ext_resource type="Script" uid="uid://dld5rtvyw10oy" path="res://systems/interaction/drop_socket.gd" id="1_n3niw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0die"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_n3niw"]
+offsets = PackedFloat32Array(0.4682081, 0.9364162)
+colors = PackedColorArray(0.38969305, 0.8210707, 1.0807776, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n3niw"]
+gradient = SubResource("Gradient_n3niw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.84615386, 0.16239317)
+
+[node name="DropSocket" type="StaticBody2D" unique_id=2030778956 groups=["sockets"]]
+collision_layer = 512
+collision_mask = 256
+script = ExtResource("1_n3niw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=916726455]
+shape = SubResource("RectangleShape2D_n0die")
+
+[node name="DropHighlight" type="CPUParticles2D" parent="." unique_id=1609543808]
+amount = 30
+texture = SubResource("GradientTexture2D_n3niw")
+lifetime = 0.5
+emission_shape = 6
+emission_ring_inner_radius = 35.0
+emission_ring_radius = 40.0
+gravity = Vector2(0, 0)
+orbit_velocity_min = 0.05
+orbit_velocity_max = 0.1
+scale_amount_min = 0.05
+scale_amount_max = 0.1
+color = Color(1.7060097, 1.5872233, 1.4195247, 1)

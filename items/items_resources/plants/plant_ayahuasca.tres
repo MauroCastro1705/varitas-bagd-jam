@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bwt2kgk57sm7e"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_l1oqk"]
+
+[resource]
+script = ExtResource("1_l1oqk")
+item_name = "Ayahuasca"
+item_description = "Su gran poder alucinógeno es utilizado por las comunidades indígenas para realizar rituales religiosos, con mayor acción en los pueblos amazónicos."
+tags = Array[int]([50, 91, 90])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

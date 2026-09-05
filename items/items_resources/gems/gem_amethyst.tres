@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bc2s68xcw6aqw"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_72gtm"]
+[ext_resource type="Texture2D" uid="uid://dv7cu8mv7evay" path="res://assets/items/gem_amethyst.png" id="2_yktol"]
+
+[resource]
+script = ExtResource("1_72gtm")
+sprite = ExtResource("2_yktol")
+item_name = "Amatista"
+item_description = "Su nombre proviene del griego “amethystos”, que significa “no ebrio” o “sobrio”, en referencia a la antigua creencia de que protegía contra la embriaguez."
+tags = Array[int]([23, 55, 119])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

@@ -1,0 +1,27 @@
+[gd_resource type="Theme" format=3 uid="uid://bcatblfh2nkib"]
+
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="1_wjelo"]
+[ext_resource type="Texture2D" uid="uid://d1krdcj1xuhcj" path="res://assets/kenney ui/panel_brown_corners_a.png" id="2_scnqy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_umvcx"]
+texture = ExtResource("2_scnqy")
+texture_margin_left = 33.0
+texture_margin_top = 34.0
+texture_margin_right = 33.0
+texture_margin_bottom = 34.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k70l4"]
+texture = ExtResource("2_scnqy")
+texture_margin_left = 32.0
+texture_margin_top = 33.0
+texture_margin_right = 32.0
+texture_margin_bottom = 33.0
+modulate_color = Color(0.79038984, 0.72648233, 0.70382667, 1)
+
+[resource]
+Button/colors/font_color = Color(0.28235295, 0.2, 0.13725491, 1)
+Button/colors/font_hover_color = Color(0.3305548, 0.236877, 0.16554594, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_wjelo")
+Button/styles/hover = SubResource("StyleBoxTexture_umvcx")
+Button/styles/normal = SubResource("StyleBoxTexture_k70l4")

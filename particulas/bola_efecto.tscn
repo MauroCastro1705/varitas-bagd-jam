@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d3htuii2tthgl"]
+
+[sub_resource type="Gradient" id="Gradient_0l05m"]
+offsets = PackedFloat32Array(0.31355932, 1)
+colors = PackedColorArray(1, 1, 0.31764707, 1, 1, 1, 0, 0.37254903)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_udmlc"]
+gradient = SubResource("Gradient_0l05m")
+
+[sub_resource type="Curve" id="Curve_am1n3"]
+_data = [Vector2(0.011450388, 0.012000084), 0.0, 0.0, 0, 0, Vector2(0.9847328, 0.59440005), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5bbkp"]
+curve = SubResource("Curve_am1n3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xaocv"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 18.15
+spread = 85.235
+angular_velocity_min = 11.799984
+angular_velocity_max = 354.09998
+gravity = Vector3(0, -60, 0)
+linear_accel_min = -0.5000022
+linear_accel_max = 0.49999776
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_5bbkp")
+color = Color(1.0416296, 0.91118765, 0.15707007, 1)
+color_ramp = SubResource("GradientTexture1D_udmlc")
+hue_variation_min = -0.020000022
+hue_variation_max = 0.049999975
+
+[node name="bola_efecto" type="GPUParticles2D" unique_id=985889854]
+amount = 30
+lifetime = 1.6
+process_material = SubResource("ParticleProcessMaterial_xaocv")

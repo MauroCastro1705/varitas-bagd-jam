@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://mqiaf3jhewet"]
+
+[ext_resource type="Shader" uid="uid://bx8kh4lxa1iyu" path="res://shaders/outline_2d.gdshader" id="1_6cwga"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_6cwga")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_tint = Color(1, 1, 1, 1)
+shader_parameter/atlas_region_pos = Vector2(0, 0)
+shader_parameter/atlas_region_size = Vector2(1, 1)
+shader_parameter/draw_size = Vector2(1, 1)

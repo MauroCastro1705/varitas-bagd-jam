@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://sxvhghevhba"]
+
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="1_ldfak"]
+
+[resource]
+font = ExtResource("1_ldfak")
+font_size = 36
+font_color = Color(0.83137256, 0.105882354, 0.043137256, 1)

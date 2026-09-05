@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://buyotp6yso8gy"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_bi85t"]
+[ext_resource type="Resource" uid="uid://ccdyabnd31k8i" path="res://items/items_resources/placeholder/libro.tres" id="2_r553v"]
+[ext_resource type="Script" uid="uid://drvtr7wwle6py" path="res://characters/char_data.gd" id="2_rhtdk"]
+[ext_resource type="Texture2D" uid="uid://crggrk05dgf8u" path="res://assets/placeholder/char_random.png" id="3_r553v"]
+
+[resource]
+script = ExtResource("2_rhtdk")
+sprite = ExtResource("3_r553v")
+name = "Jose Luis"
+item_list = Array[ExtResource("1_bi85t")]([ExtResource("2_r553v")])
+dialog = ["Hola", "Soy JL3, me gusta el techno y tomar pasti", "dejame entrar a la pampa que hay alta fiesta"]
+metadata/_custom_type_script = "uid://drvtr7wwle6py"

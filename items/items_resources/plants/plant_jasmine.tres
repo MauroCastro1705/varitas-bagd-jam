@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://juhynrxevcb1"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_0egu8"]
+
+[resource]
+script = ExtResource("1_0egu8")
+item_name = "Pétalos de jazmín"
+item_description = "Sueños lúcidos y profecía: Quemar incienso de jazmín o colocar flores cerca de la cama antes de dormir ayuda a estimular la clarividencia y a recordar los mensajes del plano onírico."
+tags = Array[int]([50, 94])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

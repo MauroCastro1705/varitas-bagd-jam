@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfar0loo6jhg6"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_324mf"]
+[ext_resource type="Texture2D" uid="uid://ctllq4d3d5pju" path="res://assets/items/hat_chino01.png" id="2_4oobh"]
+
+[resource]
+script = ExtResource("1_324mf")
+sprite = ExtResource("2_4oobh")
+item_name = "Sombrero cónico asiático"
+item_description = "El sombrero cónico asiático, comúnmente conocido como sombrero de arroz asiático, o simplemente sombrero de arroz, pero también sombrero chino, sombrero oriental o sombrero de campesino, es un tipo simple de sombrero."
+tags = Array[int]([30, 11])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

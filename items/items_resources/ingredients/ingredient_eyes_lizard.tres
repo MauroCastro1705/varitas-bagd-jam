@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b6du4r4y3rg42"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_eeavw"]
+[ext_resource type="Texture2D" uid="uid://dnlq0eiy36b5v" path="res://assets/items/animal_dragoneye.png" id="2_hiff6"]
+
+[resource]
+script = ExtResource("1_eeavw")
+sprite = ExtResource("2_hiff6")
+item_name = "Ojos de lagarto"
+item_description = "Estos ojos me hacen acordar a otro animal mucho más grande."
+tags = Array[int]([3, 19, 41])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

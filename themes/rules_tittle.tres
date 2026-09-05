@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://brpj0lmjeem10"]
+
+[ext_resource type="FontFile" uid="uid://ky2jknnbysxm" path="res://fonts/Pixelout.ttf" id="1_lgthy"]
+
+[resource]
+font = ExtResource("1_lgthy")
+font_size = 30
+font_color = Color(0.32067502, 0.2219947, 0.11824704, 1)

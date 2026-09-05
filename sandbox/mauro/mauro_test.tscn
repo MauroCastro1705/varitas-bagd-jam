@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djsk0y45wjdwa"]
+
+[ext_resource type="Script" uid="uid://b4ceow0jlypm0" path="res://sandbox/mauro/test.gd" id="1_512ld"]
+[ext_resource type="PackedScene" uid="uid://cbybj5wspya8b" path="res://componentes/item_spawner/item_spawner.tscn" id="2_c1jxo"]
+
+[node name="MauroTest" type="Node2D" unique_id=1306624922]
+script = ExtResource("1_512ld")
+
+[node name="ItemSpawner" parent="." unique_id=937600891 instance=ExtResource("2_c1jxo")]
+position = Vector2(701, 384)
+horizontal_spacing = 150.0
+vertical_spacing = 150.0
+random_offset_range = 50.0
+bounce_intensity = 80.0
+wiggle_amount = 0.0

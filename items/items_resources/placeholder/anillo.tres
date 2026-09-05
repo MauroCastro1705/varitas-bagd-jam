@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cb3ktssmlo4sp"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_lcw5k"]
+[ext_resource type="Texture2D" uid="uid://l8ihyxx5emvk" path="res://assets/placeholder/placeholder_ring.png" id="2_lcw5k"]
+[ext_resource type="PackedScene" uid="uid://bcnwb7ldvxvq0" path="res://particulas/trail.tscn" id="3_gj4t5"]
+
+[resource]
+script = ExtResource("1_lcw5k")
+sprite = ExtResource("2_lcw5k")
+vfx = ExtResource("3_gj4t5")
+item_name = "Anillo de necromancia"
+item_description = "\"Mi precioso...\""
+tags = Array[int]([1, 2])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

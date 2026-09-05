@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccdyabnd31k8i"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_6ox5a"]
+[ext_resource type="Texture2D" uid="uid://bi8amif0j1w3" path="res://assets/placeholder/placeholder_book.png" id="2_6ox5a"]
+[ext_resource type="PackedScene" uid="uid://bcnwb7ldvxvq0" path="res://particulas/trail.tscn" id="3_8vaor"]
+
+[resource]
+script = ExtResource("1_6ox5a")
+sprite = ExtResource("2_6ox5a")
+vfx = ExtResource("3_8vaor")
+item_name = "Libro mágico"
+item_description = "Un libro con encantamientos mágicos."
+tags = Array[int]([1, 2])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

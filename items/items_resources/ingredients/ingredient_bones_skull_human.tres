@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://g3gmefn7gn0i"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_bgrwk"]
+
+[resource]
+script = ExtResource("1_bgrwk")
+item_name = "Calavera humana"
+item_description = "Alguna vez supo hablar, pero se ve que le cortaron la lengua."
+tags = Array[int]([9, 64, 36])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

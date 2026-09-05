@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://22bi6twh1qqg"]
+
+[ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_ilhb3"]
+
+[resource]
+script = ExtResource("1_ilhb3")
+item_name = "Polvos grises"
+item_description = "Hecho de huesos molidos."
+tags = Array[int]([17, 27, 9])
+metadata/_custom_type_script = "uid://can4g3nbl1tpy"

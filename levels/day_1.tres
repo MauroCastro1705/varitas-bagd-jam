@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DayData" format=3 uid="uid://decpq6oj4552v"]
+
+[ext_resource type="Script" uid="uid://kit52stbevyi" path="res://items/item_rule.gd" id="1_v3heu"]
+[ext_resource type="Script" uid="uid://drvtr7wwle6py" path="res://characters/char_data.gd" id="2_nndka"]
+[ext_resource type="Script" uid="uid://dostm2rvgrmy2" path="res://levels/day_data.gd" id="3_5pje7"]
+[ext_resource type="Resource" uid="uid://dob4arxvqpya4" path="res://characters/character_resources/npc_1.tres" id="3_64ssk"]
+[ext_resource type="Resource" uid="uid://evttwbv277ip" path="res://characters/character_resources/npc_2.tres" id="4_tytdh"]
+[ext_resource type="Resource" uid="uid://b2ihxk0c5pw03" path="res://characters/character_resources/npc_3.tres" id="5_e1cqk"]
+
+[resource]
+script = ExtResource("3_5pje7")
+day_number = 1
+characters = Array[ExtResource("2_nndka")]([ExtResource("3_64ssk"), ExtResource("4_tytdh"), ExtResource("5_e1cqk")])
+metadata/_custom_type_script = "uid://dostm2rvgrmy2"
