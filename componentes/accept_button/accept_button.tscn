@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://uv5ssk41w4ie"]
+
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="1_87sjf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4bq1"]
+bg_color = Color(0.23191202, 0.4845338, 0.19351745, 1)
+
+[node name="AcceptButton" type="Button" unique_id=1970420121]
+custom_minimum_size = Vector2(200, 100)
+theme_override_fonts/font = ExtResource("1_87sjf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4bq1")
+text = "Aprobado"
