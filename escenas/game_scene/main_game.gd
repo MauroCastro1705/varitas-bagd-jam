@@ -40,6 +40,8 @@ func _ready():
 	_set_up_connections()
 	_load_day_data()
 	_update_label()
+	accept_button.disabled = false
+	detain_button.disabled = false
 
 
 func _load_day_data() -> void:
@@ -91,6 +93,8 @@ func no_character_left() -> void: #quitamos el nodo de npc directamente
 	npc.queue_free() #.hide() podria ser tambien
 	day_ended = true
 	print("termino el dia")
+	accept_button.disabled = true
+	detain_button.disabled = true
 	#llamar a end_day?
 
 
@@ -104,6 +108,8 @@ func begin_dialog():
 	var nombre = npc.data.name
 	DIALOGOS.set_generic_dialog(nombre, dialogo)
 	DIALOGOS.start_generic_dialog()
+	accept_button.disabled = true
+	detain_button.disabled = true
 
 
 func begin_last_dialog(value):
@@ -124,6 +130,8 @@ func _finalizo_dialogo():
 		say_final_dialog = false
 	else:
 		spawn_items_in_scene()
+		accept_button.disabled = false
+		detain_button.disabled = false
 
 
 func spawn_items_in_scene():

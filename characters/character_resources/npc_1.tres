@@ -9,6 +9,6 @@
 [resource]
 script = ExtResource("2_o4j81")
 sprite = ExtResource("5_0icn2")
-name = "Paulo"
+name = "Aurelio "
 item_list = Array[ExtResource("1_havbc")]([ExtResource("2_lwkko"), ExtResource("3_bypkh")])
 metadata/_custom_type_script = "uid://drvtr7wwle6py"

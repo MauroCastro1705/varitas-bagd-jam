@@ -1,8 +1,15 @@
 [gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://evttwbv277ip"]
 
 [ext_resource type="Script" uid="uid://can4g3nbl1tpy" path="res://items/item_data.gd" id="1_e5jwx"]
+[ext_resource type="Resource" uid="uid://dpva88jlpn7u6" path="res://items/items_resources/hats/hat_copa.tres" id="2_2afdv"]
 [ext_resource type="Script" uid="uid://drvtr7wwle6py" path="res://characters/char_data.gd" id="2_yisby"]
+[ext_resource type="Resource" uid="uid://b33mlfqgcrscl" path="res://items/items_resources/hats/hat_coya.tres" id="3_ytw67"]
+[ext_resource type="Resource" uid="uid://crngxd0st3w8e" path="res://items/items_resources/wands/wand_iron.tres" id="4_4o2yk"]
+[ext_resource type="Texture2D" uid="uid://c3l2xlfcxginc" path="res://assets/placeholder/char_random2.png" id="6_clppx"]
 
 [resource]
 script = ExtResource("2_yisby")
+sprite = ExtResource("6_clppx")
+name = "Galdric "
+item_list = Array[ExtResource("1_e5jwx")]([ExtResource("2_2afdv"), ExtResource("3_ytw67"), ExtResource("4_4o2yk")])
 metadata/_custom_type_script = "uid://drvtr7wwle6py"
