@@ -150,16 +150,13 @@ func _on_dialog_finished():
 		DialogState.FINAL_DIALOG:
 			# Terminó el diálogo final, pasar al siguiente personaje
 			current_state = DialogState.TRANSITION
-			# Limpiar items y preparar siguiente personaje
-			clear_all_items()
+			clear_all_items()# Limpiar items y preparar siguiente personaje
 			clear_list()
 			_update_label()
-			# Cargar siguiente personaje
-			_set_character_data(get_next_character())
 			
+			_set_character_data(get_next_character())# Cargar siguiente personaje
 		_:
-			# Por si acaso
-			pass
+			pass# Por si acaso
 
 
 func spawn_items_in_scene():
