@@ -11,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://r14ysghdxj3x" path="res://assets/kenney ui/button_brown.png" id="7_jh1vy"]
 [ext_resource type="PackedScene" uid="uid://cbybj5wspya8b" path="res://componentes/item_spawner/item_spawner.tscn" id="7_t4kle"]
 [ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="8_8uoum"]
-[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="9_oydqm"]
-[ext_resource type="Theme" uid="uid://cbu1ppbp5g1gk" path="res://themes/boton_generico.tres" id="11_8uoum"]
+[ext_resource type="PackedScene" uid="uid://uv5ssk41w4ie" path="res://componentes/accept_button/accept_button.tscn" id="9_kwssr"]
+[ext_resource type="PackedScene" uid="uid://cn8d8g4rs8rj1" path="res://componentes/detain_button/detain_button.tscn" id="10_kwssr"]
+[ext_resource type="PackedScene" uid="uid://duwoibybhk653" path="res://componentes/start_day_button/start_day_button.tscn" id="12_kwssr"]
 [ext_resource type="PackedScene" uid="uid://bkgdukov5jpth" path="res://componentes/libro_prohibidos/libro_prohibido.tscn" id="13_oydqm"]
 [ext_resource type="PackedScene" uid="uid://bxabtswqtfaql" path="res://componentes/libro_confiscar/libro_confiscar.tscn" id="14_jh1vy"]
 
@@ -21,12 +22,6 @@ font = ExtResource("8_8uoum")
 font_size = 35
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4bq1"]
-bg_color = Color(0.23191202, 0.4845338, 0.19351745, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrah2"]
-bg_color = Color(0.6156863, 0, 0.050980393, 1)
 
 [node name="MainGame" type="Node2D" unique_id=1890153168]
 script = ExtResource("1_0lgp6")
@@ -99,38 +94,26 @@ horizontal_alignment = 1
 
 [node name="ActionButtons" type="HBoxContainer" parent="." unique_id=36876935]
 offset_left = 2.0
-offset_top = 908.0
+offset_top = 932.0
 offset_right = 640.0
-offset_bottom = 1008.0
+offset_bottom = 1032.0
 theme_override_constants/separation = 70
 alignment = 1
 
-[node name="AcceptButton" type="Button" parent="ActionButtons" unique_id=1993437800]
-custom_minimum_size = Vector2(200, 100)
+[node name="AcceptButton" parent="ActionButtons" unique_id=1970420121 instance=ExtResource("9_kwssr")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("9_oydqm")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_o4bq1")
-text = "Aprobado"
 
-[node name="DetainButton" type="Button" parent="ActionButtons" unique_id=645483608]
-custom_minimum_size = Vector2(200, 100)
+[node name="DetainButton" parent="ActionButtons" unique_id=1599483421 instance=ExtResource("10_kwssr")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("9_oydqm")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_nrah2")
-text = "Rechazado"
 
 [node name="ConfiscadosBox" parent="." unique_id=2137683071 instance=ExtResource("1_70yia")]
 position = Vector2(1729, 569)
 
-[node name="Button" type="Button" parent="." unique_id=1224887150]
-offset_left = 62.0
-offset_top = 790.0
-offset_right = 258.0
-offset_bottom = 869.0
-theme = ExtResource("11_8uoum")
-text = "Empezar a Trabajar"
+[node name="start_day_button" parent="." unique_id=666361474 instance=ExtResource("12_kwssr")]
+offset_left = 40.0
+offset_top = 794.0
+offset_right = 247.0
+offset_bottom = 871.0
 
 [node name="Dialog_timer" type="Timer" parent="." unique_id=1823157986]
 wait_time = 0.4
@@ -168,5 +151,5 @@ mouse_filter = 2
 
 [connection signal="pressed" from="ActionButtons/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="ActionButtons/DetainButton" to="." method="_on_detain_button_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="start_day_button" to="." method="_on_start_day_button_pressed"]
 [connection signal="timeout" from="Dialog_timer" to="." method="_on_dialog_timer_timeout"]

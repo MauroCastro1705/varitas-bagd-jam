@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cn8d8g4rs8rj1"]
+
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="1_oq4li"]
+[ext_resource type="Script" uid="uid://bgcx7ojsr86i6" path="res://componentes/detain_button/detain_button.gd" id="2_vtbcy"]
+[ext_resource type="Texture2D" uid="uid://bs60hwxcafgph" path="res://assets/bordes_panels/Border All 8.png" id="3_l54rw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrah2"]
+bg_color = Color(0.6156863, 0, 0.050980393, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_isa7o"]
+font = ExtResource("1_oq4li")
+font_size = 38
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2pan"]
+load_path = "res://.godot/imported/Ram Deco All.png-3ea4ee358443e9f8aa4fb4d642aa9c51.ctex"
+
+[node name="DetainButton" type="Button" unique_id=1599483421]
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = -1
+anchor_right = 0.104
+anchor_bottom = 0.093
+offset_right = -199.68001
+offset_bottom = -100.44
+theme_override_fonts/font = ExtResource("1_oq4li")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_nrah2")
+text = "Rechazado"
+script = ExtResource("2_vtbcy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1712761504]
+self_modulate = Color(0.6627451, 0.6627451, 0.6627451, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -99.5
+offset_bottom = -50.5
+scale = Vector2(2, 2)
+texture = ExtResource("3_l54rw")
+region_rect = Rect2(0, 447.20367, 64.37694, 64.87598)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Label" type="Label" parent="." unique_id=1635632997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 9.0
+offset_right = -31.0
+offset_bottom = -8.0
+text = "DETENER"
+label_settings = SubResource("LabelSettings_isa7o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hover" type="NinePatchRect" parent="." unique_id=401432235]
+self_modulate = Color(0.7176471, 0.19215687, 0.26666668, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(115, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.14400001
+anchor_top = 0.13000001
+anchor_right = 1.1650001
+anchor_bottom = 0.85
+offset_left = 10.937239
+offset_top = -25.0
+offset_right = -130.9314
+offset_bottom = -36.0
+scale = Vector2(2, 2)
+texture = SubResource("CompressedTexture2D_h2pan")
+region_rect = Rect2(257, 129, 62, 62)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,13 +1,89 @@
 [gd_scene format=3 uid="uid://uv5ssk41w4ie"]
 
 [ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="1_87sjf"]
+[ext_resource type="Texture2D" uid="uid://dkps1orxesvlq" path="res://assets/bordes_panels/Border All 4.png" id="2_fyi0e"]
+[ext_resource type="Script" uid="uid://ciqq6qeekxupe" path="res://componentes/accept_button/accept_button.gd" id="2_ltrom"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4bq1"]
 bg_color = Color(0.23191202, 0.4845338, 0.19351745, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_fyi0e"]
+font = ExtResource("1_87sjf")
+font_size = 38
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ltrom"]
+load_path = "res://.godot/imported/Ram Deco All.png-3ea4ee358443e9f8aa4fb4d642aa9c51.ctex"
+
 [node name="AcceptButton" type="Button" unique_id=1970420121]
 custom_minimum_size = Vector2(200, 100)
+anchors_preset = -1
+anchor_left = -0.008
+anchor_top = -0.015000001
+anchor_right = 0.113000005
+anchor_bottom = 0.102000006
+offset_left = 15.360001
+offset_top = 16.2
+offset_right = -16.960007
+offset_bottom = -10.160004
 theme_override_fonts/font = ExtResource("1_87sjf")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_o4bq1")
 text = "Aprobado"
+script = ExtResource("2_ltrom")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=626769942]
+self_modulate = Color(0.6627451, 0.6627451, 0.6627451, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -99.5
+offset_bottom = -50.5
+scale = Vector2(2, 2)
+texture = ExtResource("2_fyi0e")
+region_rect = Rect2(0, 447.20367, 64.37694, 64.87598)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Label" type="Label" parent="." unique_id=1521716584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 9.0
+offset_right = -31.0
+offset_bottom = -8.0
+text = "APROBADO"
+label_settings = SubResource("LabelSettings_fyi0e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hover" type="NinePatchRect" parent="." unique_id=1635148721]
+self_modulate = Color(0.2901961, 0.69803923, 0.3019608, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(115, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.14400001
+anchor_top = 0.13000001
+anchor_right = 1.1650001
+anchor_bottom = 0.85
+offset_left = 10.937239
+offset_top = -25.0
+offset_right = -130.9314
+offset_bottom = -36.0
+scale = Vector2(2, 2)
+texture = SubResource("CompressedTexture2D_ltrom")
+region_rect = Rect2(257, 129, 62, 62)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
