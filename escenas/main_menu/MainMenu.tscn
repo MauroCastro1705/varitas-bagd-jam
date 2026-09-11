@@ -133,7 +133,6 @@ color = Color(0.19859058, 0.288602, 0.2650781, 1)
 metadata/_edit_lock_ = true
 
 [node name="StartButton" type="Button" parent="." unique_id=1150670714]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -151,7 +150,6 @@ text = "jugar
 "
 
 [node name="version" type="Label" parent="." unique_id=2103998420]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -166,7 +164,6 @@ text = "v  0.0.3"
 label_settings = SubResource("LabelSettings_ckk3t")
 
 [node name="creditos" type="Button" parent="." unique_id=988356707]
-visible = false
 layout_mode = 0
 offset_left = 1490.0
 offset_top = 849.0
@@ -176,7 +173,6 @@ theme = ExtResource("3_uda5e")
 text = "Creditos"
 
 [node name="version2" type="Label" parent="." unique_id=2003783936]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -191,7 +187,6 @@ text = "BAGD level up JAM - 2026"
 label_settings = SubResource("LabelSettings_ckk3t")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=750695177]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -208,7 +203,6 @@ stretch_mode = 5
 metadata/_edit_lock_ = true
 
 [node name="HatCopa01" type="Sprite2D" parent="." unique_id=296748639]
-visible = false
 position = Vector2(1389.5454, 182.1818)
 rotation = 0.49752083
 scale = Vector2(0.17823009, 0.1582183)
@@ -216,7 +210,6 @@ texture = ExtResource("6_12aag")
 offset = Vector2(-15.32959, -236.46777)
 
 [node name="WandWood02" type="Sprite2D" parent="." unique_id=1124630997]
-visible = false
 position = Vector2(456, 493.00003)
 rotation = -0.6628727
 scale = Vector2(0.25312492, 0.25312492)
@@ -224,7 +217,6 @@ texture = ExtResource("7_4qipx")
 offset = Vector2(8.7178955, -409.19214)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="WandWood02" unique_id=695132453]
-visible = false
 position = Vector2(2.1957397, -1010.71533)
 rotation = 0.6628727
 scale = Vector2(3.9506187, 3.9506187)
