@@ -63,8 +63,8 @@ position = Vector2(1271, 645)
 [node name="Dialogos" parent="." unique_id=2038885928 instance=ExtResource("2_0clf5")]
 offset_left = 100.0
 offset_top = 554.0
-offset_right = 100.0
-offset_bottom = 554.0
+offset_right = 539.0
+offset_bottom = 754.0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1435611147]
 modulate = Color(0.8346143, 0.8346143, 0.8346143, 1)

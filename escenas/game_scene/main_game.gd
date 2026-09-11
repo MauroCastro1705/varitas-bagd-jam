@@ -6,6 +6,7 @@ var dialogos = DialogosGenericos.new()
 var dialogo_admision = dialogos.dialogo_admision
 var dialogo_confiscado = dialogos.dialogo_confiscacion
 var dialogo_detencion = dialogos.dialogo_detencion
+var dialogo_introduccion = dialogos.dialogo_introduccion
 
 ## Datos propios del día actual
 var cur_char_list: Array[CharacterData] = []
@@ -119,10 +120,8 @@ func _on_dialog_timer_timeout() -> void:
 
 func begin_initial_dialog():
 	current_state = DialogState.INITIAL_DIALOG
-	var dialogo = npc.data.dialog
-	var nombre = npc.data.name
-	DIALOGOS.set_generic_dialog(nombre, dialogo)
-	DIALOGOS.start_generic_dialog()
+	var nombre:String = npc.data.name
+	DIALOGOS.show_random_dialog(nombre, dialogo_introduccion)
 	_set_buttons_enabled(false)  # Deshabilitar durante el diálogo
 
 

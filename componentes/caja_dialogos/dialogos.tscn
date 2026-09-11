@@ -2,25 +2,32 @@
 
 [ext_resource type="Script" uid="uid://coexvtg5ikh0i" path="res://componentes/caja_dialogos/dialogos.gd" id="1_h784s"]
 [ext_resource type="Texture2D" uid="uid://vicpufdeuy01" path="res://assets/UI Assets pack_v.1_st/Book.png" id="2_vqega"]
-[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="3_vqega"]
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="3_va38d"]
 [ext_resource type="Theme" uid="uid://u17ow2y57tq3" path="res://themes/dialogos_textos.tres" id="3_y4hk6"]
 [ext_resource type="Theme" uid="uid://cbu1ppbp5g1gk" path="res://themes/boton_generico.tres" id="5_va38d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_va38d"]
-font = ExtResource("3_vqega")
-font_size = 30
+font = ExtResource("3_va38d")
+font_size = 36
 font_color = Color(0.105882354, 0.0627451, 0.02745098, 1)
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Dialogos" type="Control" unique_id=2038885928]
+custom_minimum_size = Vector2(150, 200)
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 0.23900001
+anchor_bottom = 0.185
+offset_right = 0.11999512
+offset_bottom = 0.19999695
 script = ExtResource("1_h784s")
 
 [node name="panel" type="NinePatchRect" parent="." unique_id=1708790754]
-layout_mode = 0
-offset_right = 412.0
-offset_bottom = 146.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 region_rect = Rect2(145, 161, 46, 46)
 patch_margin_left = 11
 patch_margin_top = 11
@@ -58,7 +65,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
 offset_top = 5.0
-offset_bottom = 16.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 10
@@ -83,22 +90,18 @@ custom_minimum_size = Vector2(50, 80)
 layout_mode = 2
 theme = ExtResource("3_y4hk6")
 theme_override_constants/outline_size = 4
-theme_override_font_sizes/normal_font_size = 31
+theme_override_font_sizes/normal_font_size = 28
 text = "aaaaaaaaaaaaaaaaaaaaa
 "
-
-[node name="HBoxContainer" type="HBoxContainer" parent="panel/MarginContainer/VBoxContainer" unique_id=1164808153]
-layout_mode = 2
-alignment = 2
 
 [node name="next" type="Button" parent="." unique_id=1239628149]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 20)
 layout_mode = 0
-offset_left = 333.0
-offset_top = 126.0
-offset_right = 609.6666
-offset_bottom = 276.0
+offset_left = 392.0
+offset_top = 181.0
+offset_right = 668.6666
+offset_bottom = 331.0
 scale = Vector2(0.3, 0.3)
 theme = ExtResource("5_va38d")
 theme_override_font_sizes/font_size = 80

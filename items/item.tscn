@@ -6,6 +6,8 @@
 [node name="Item" type="Node2D" unique_id=1982616256 groups=["items"]]
 script = ExtResource("1_pxpuq")
 data = ExtResource("2_buahv")
+max_size = Vector2(50, 50)
+only_shrink = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1060736633]
 

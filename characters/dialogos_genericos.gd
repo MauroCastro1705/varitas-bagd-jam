@@ -20,3 +20,11 @@ var dialogo_detencion = [
 	"Estuve tan cerca esta vez...cuando salga volveré a intentar",
 	"¡Eh! Noo, juro que no soy malo. ¡No me lleven por favor! ¡Tengo que darle de comer a mi gato!"
 	]
+
+var dialogo_introduccion = [
+	"Buenos días, acá le dejo",
+	"Qué loco, ¿Para qué tanto control?",
+	"Por supuesto, llevo todo en regla siempre",
+	"Tomá pibe",
+	"No hay nada raro acá eeh, no te preocupes"
+]

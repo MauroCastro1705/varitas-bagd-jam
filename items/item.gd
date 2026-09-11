@@ -7,6 +7,12 @@ signal tooltip_hidden()
 
 var is_being_dragged: bool = false
 
+
+# NUEVO
+@export var max_size: Vector2 = Vector2(200, 200)
+@export var only_shrink: bool = true
+
+
 # Estado temporal mientras el item está sobre un socket
 var is_hovering_socket: bool = false
 var drop_socket_ref: StaticBody2D = null
@@ -24,22 +30,32 @@ var particles: CPUParticles2D = null
 func _ready() -> void:
 	if not data:
 		return
-	#data.item_name
-	#data.item_description
-	#data.sfx
-	#data.vfx
+
 	if data.sprite:
 		sprite.texture = data.sprite
-		# Crea un rectángulo que cubre por completo la textura
-		var rect = RectangleShape2D.new()
-		rect.size = data.sprite.get_size()
-		# Y aplica ese rectángulo como forma de colisión
+
+		# 1. Calcular el factor de escala manteniendo el aspecto
+		var tex_size: Vector2 = data.sprite.get_size()
+		var scale_factor: float = min(
+			max_size.x / tex_size.x,
+			max_size.y / tex_size.y
+		)
+		if only_shrink:
+			scale_factor = min(scale_factor, 1.0)
+
+		# 2. Aplicar la escala al nodo completo (afecta sprite, área y colisión)
+		self.scale = Vector2(scale_factor, scale_factor)
+
+		# 3. La collision shape usa el tamaño ORIGINAL de la textura,
+		#    porque la escala del nodo se aplica encima automáticamente
+		var rect := RectangleShape2D.new()
+		rect.size = tex_size
 		collision_shape.shape = rect
 
 	if data.vfx:
 		particles = data.vfx.instantiate()
 		self.add_child(particles)
-		particles.emitting = false # Iniciar apagadas por defecto
+		particles.emitting = false
 
 
 func _input(event: InputEvent) -> void:
