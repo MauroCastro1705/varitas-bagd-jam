@@ -7,6 +7,7 @@
 [ext_resource type="LabelSettings" uid="uid://bgv57ay45cg4k" path="res://themes/rules_text.tres" id="5_gykh2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d2xhj"]
+line_spacing = -10.0
 font = ExtResource("4_yw5p6")
 font_size = 43
 font_color = Color(0.16078432, 0.105882354, 0.043137256, 1)
@@ -22,12 +23,14 @@ font_size = 36
 font_color = Color(0.30732283, 0.015668008, 0.004548982, 1)
 
 [node name="Libro_confiscar" type="Control" unique_id=1926663222]
+z_index = 100
 layout_mode = 3
 anchor_right = 0.19000001
 anchor_bottom = 0.397
 offset_right = -0.8000183
 offset_bottom = 18.23999
 script = ExtResource("1_gejhq")
+slide_length = 350
 
 [node name="Libro_cerrado" type="NinePatchRect" parent="." unique_id=1616441148]
 texture_filter = 1
@@ -60,6 +63,8 @@ custom_minimum_size = Vector2(655.6, 447)
 layout_mode = 0
 offset_right = 721.0
 offset_bottom = 447.0
+offset_transform_enabled = true
+offset_transform_rotation = -0.008726646
 texture = ExtResource("3_pl051")
 region_rect = Rect2(14, 32, 164, 97)
 

@@ -126,20 +126,6 @@ horizontal_spacing = 180.0
 
 [node name="HUD" parent="." unique_id=101725470 instance=ExtResource("6_fs8sd")]
 
-[node name="Libro_confiscar" parent="." unique_id=1926663222 instance=ExtResource("14_jh1vy")]
-offset_left = 673.0
-offset_top = 855.0
-offset_right = 673.0
-offset_bottom = 873.24
-slide_length = 450
-
-[node name="Libro_prohibido" parent="." unique_id=447603533 instance=ExtResource("13_oydqm")]
-offset_left = 1059.0
-offset_top = 856.0
-offset_right = 1059.04
-offset_bottom = 862.24
-slide_length = 450
-
 [node name="DeskBounds" type="ReferenceRect" parent="." unique_id=616802196]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 400)
@@ -148,6 +134,18 @@ offset_top = 55.0
 offset_right = 1867.0
 offset_bottom = 856.0
 mouse_filter = 2
+
+[node name="Libro_confiscar" parent="." unique_id=1926663222 instance=ExtResource("14_jh1vy")]
+offset_left = 673.0
+offset_top = 855.0
+offset_right = 673.0
+offset_bottom = 873.24
+
+[node name="Libro_prohibido" parent="." unique_id=447603533 instance=ExtResource("13_oydqm")]
+offset_left = 1059.0
+offset_top = 856.0
+offset_right = 1059.04
+offset_bottom = 862.24
 
 [connection signal="pressed" from="ActionButtons/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="ActionButtons/DetainButton" to="." method="_on_detain_button_pressed"]

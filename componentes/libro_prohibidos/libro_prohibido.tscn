@@ -8,11 +8,13 @@
 [ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="6_d2xhj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d2xhj"]
+line_spacing = -10.0
 font = ExtResource("6_d2xhj")
 font_size = 43
 font_color = Color(0.16078432, 0.105882354, 0.043137256, 1)
 
 [node name="Libro_prohibido" type="Control" unique_id=1926663222]
+z_index = 100
 layout_mode = 3
 anchor_right = 0.18800001
 anchor_bottom = 0.397
@@ -51,6 +53,8 @@ custom_minimum_size = Vector2(655.6, 447)
 layout_mode = 0
 offset_right = 721.0
 offset_bottom = 447.0
+offset_transform_enabled = true
+offset_transform_rotation = 0.008726646
 texture = ExtResource("3_45rgc")
 region_rect = Rect2(14, 32, 164, 97)
 
