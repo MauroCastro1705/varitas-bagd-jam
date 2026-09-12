@@ -2,7 +2,6 @@
 
 [ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="1_0y240"]
 [ext_resource type="Script" uid="uid://c0t8tvs05h6lm" path="res://componentes/start_day_button/start_day_button.gd" id="1_xkyv3"]
-[ext_resource type="Texture2D" uid="uid://12ijt5et6dk5" path="res://assets/bordes_panels/Border All 11.png" id="1_yuhgu"]
 [ext_resource type="Texture2D" uid="uid://c40l6dbihe76a" path="res://assets/bordes_panels/Ram Deco All.png" id="3_4fs88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yuhgu"]
@@ -16,29 +15,13 @@ anchor_bottom = 0.074
 offset_top = 1.0
 offset_right = 0.71998596
 offset_bottom = 1.0800018
+theme_override_fonts/font = ExtResource("1_0y240")
+theme_override_font_sizes/font_size = 28
 text = "Empezar a Trabajar"
 script = ExtResource("1_xkyv3")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=295020110]
-self_modulate = Color(0.6627451, 0.6627451, 0.6627451, 1)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.025
-anchor_right = 1.052
-anchor_bottom = 1.0630001
-offset_top = -0.025000095
-offset_right = -110.42001
-offset_bottom = -43.54001
-scale = Vector2(2, 2)
-texture = ExtResource("1_yuhgu")
-region_rect = Rect2(257, 193, 62, 62)
-patch_margin_left = 17
-patch_margin_top = 19
-patch_margin_right = 17
-patch_margin_bottom = 17
-
-[node name="Label" type="Label" parent="." unique_id=2048547474]
+[node name="text" type="Label" parent="." unique_id=2048547474]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.067
@@ -66,7 +49,7 @@ anchor_right = 1.1190001
 anchor_bottom = 1.2
 offset_left = 0.0627861
 offset_top = 1.0
-offset_right = -123.96863
+offset_right = -128.46863
 offset_bottom = -56.5
 scale = Vector2(2, 2)
 texture = ExtResource("3_4fs88")

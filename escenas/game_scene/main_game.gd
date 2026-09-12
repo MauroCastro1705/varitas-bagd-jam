@@ -67,11 +67,12 @@ func _load_day_data() -> void:
 	cur_allowed_rules = cur_day.allowed_rules
 	cur_restricted_rules = cur_day.restricted_rules
 	cur_prohibited_rules = cur_day.prohibited_rules
-	
-	#helpers
+
+	start_day_button.text = "Iniciar dia"
 	start_day_button.disabled = false
 	start_day_button.show()
-	npc.hide()
+	npc.show()
+	day_ended = false
 	current_state = DialogState.IDLE
 
 
@@ -112,7 +113,11 @@ func no_character_left() -> void:
 	print("termino el dia")
 	_set_buttons_enabled(false)
 	current_state = DialogState.IDLE
-	#llamar a end_day?
+
+	# Reutilizamos el botón para cerrar la jornada
+	start_day_button.text = "Terminar dia"
+	start_day_button.disabled = false
+	start_day_button.show()
 
 
 func _on_dialog_timer_timeout() -> void:
@@ -229,13 +234,18 @@ func clear_list(): #solo para debug
 	Global.items_confiscados = []
 
 
-## Función tentativa para avanzar los días al terminar la jornada
 func _end_day() -> void:
 	Global.current_day += 1
-	TransitionManager.change_scene("res://escenas/day_scene/nuevo_dia.tscn")
+	TransitionManager.change_scene("res://escenas/resumen/resumen.tscn")
+
 
 
 func _on_start_day_button_pressed() -> void:
+	if day_ended:
+		_end_day()
+		return
+
+	# Flujo normal: iniciar el día
 	_start_day()
 	npc.show()
 	start_day_button.disabled = true

@@ -1,7 +1,10 @@
 extends Button
 @onready var nine_patch_rect: NinePatchRect = $NinePatchRect
-@onready var label: Label = $Label
+
 @onready var hover: NinePatchRect = $hover
+@onready var text_button: Label = $text
+
+
 
 func _ready() -> void:
 	hover.hide()
