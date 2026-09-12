@@ -1,16 +1,57 @@
 [gd_scene format=3 uid="uid://c2yctpi0do18d"]
 
 [ext_resource type="Script" uid="uid://s2um442cabkm" path="res://escenas/resumen/resumen.gd" id="1_w03nd"]
+[ext_resource type="Shader" uid="uid://b7fdd3g627rgn" path="res://shaders/transition.gdshader" id="2_rksr4"]
+[ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="3_umdih"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umdih"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xedm"]
+shader = ExtResource("2_rksr4")
+shader_parameter/progress = 0.5
+shader_parameter/speed = 0.1
+shader_parameter/pixelation = Vector2(2, 2)
+shader_parameter/zoom = 2.0
+shader_parameter/background_threshold = 9.49999998667295e-08
+shader_parameter/color_threshold = 0.6670000316825
+shader_parameter/color = Color(0.27450982, 0.12156863, 0.13333334, 1)
+shader_parameter/seed = 0.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xedm"]
+font = ExtResource("3_umdih")
+font_size = 80
 
 [node name="Resumen" type="Node2D" unique_id=658488841]
 script = ExtResource("1_w03nd")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=185036931]
-offset_left = -8.0
-offset_top = -3.0
-offset_right = 1926.0
-offset_bottom = 1085.0
-color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1736329118]
+material = SubResource("ShaderMaterial_umdih")
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -44.0
+offset_right = 1946.0
+offset_bottom = 1156.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.105882354, 0.11372549, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1476993651]
+material = SubResource("ShaderMaterial_7xedm")
+custom_minimum_size = Vector2(800, 800)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -27.0
+offset_right = 1937.0
+offset_bottom = 1111.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19859058, 0.288602, 0.2650781, 1)
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="." unique_id=1296747309]
@@ -19,6 +60,7 @@ offset_right = 1920.0
 offset_bottom = 142.0
 theme_override_font_sizes/font_size = 50
 text = "Resumen del dia"
+label_settings = SubResource("LabelSettings_7xedm")
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=498260497]

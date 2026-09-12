@@ -87,13 +87,15 @@ func get_next_character():
 
 
 func _set_character_data(char_data: CharacterData) -> void:
+	is_processing_action = false  # <-- resetear para el nuevo visitante
+
 	if not char_data: 
 		no_character_left()
 		return
 
 	npc.data = char_data
 	npc.sprite_2d.texture = char_data.sprite
-	dialog_timer.start() #para que no aparezca de golpe el dialogo
+	dialog_timer.start()
 
 
 func _set_up_connections() -> void:
