@@ -156,8 +156,8 @@ func _on_dialog_finished():
 		DialogState.FINAL_DIALOG:
 			# Terminó el diálogo final, pasar al siguiente personaje
 			current_state = DialogState.TRANSITION
-			clear_all_items()# Limpiar items y preparar siguiente personaje
-			clear_list()
+			clear_all_items()
+			#clear_list()
 			_update_label()
 			
 			_set_character_data(get_next_character())# Cargar siguiente personaje
@@ -202,10 +202,8 @@ func _on_accept_button_pressed() -> void:
 		print("aprobados: " , Global.characters_aproved)
 		print("en fila: " + str(cur_char_list.size()))
 		
-		# Limpiar items (opcional, se hace en la transición)
 		clear_all_items()
 		
-		# Mostrar diálogo final
 		begin_final_dialog("accepted")
 
 
@@ -218,10 +216,8 @@ func _on_detain_button_pressed() -> void:
 		print("detenidos: " , Global.characters_detained)
 		print("en fila: " + str(cur_char_list.size()))
 		
-		# Limpiar items (opcional, se hace en la transición)
 		clear_all_items()
 		
-		# Mostrar diálogo final
 		begin_final_dialog("detained")
 
 

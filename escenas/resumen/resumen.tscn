@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://s2um442cabkm" path="res://escenas/resumen/resumen.gd" id="1_w03nd"]
 [ext_resource type="Shader" uid="uid://b7fdd3g627rgn" path="res://shaders/transition.gdshader" id="2_rksr4"]
 [ext_resource type="FontFile" uid="uid://dfb37lh8su0de" path="res://fonts/SHAXIZOR.TTF" id="3_umdih"]
+[ext_resource type="FontFile" uid="uid://drcj8wdeaqkv3" path="res://fonts/PirataOne-Regular.ttf" id="4_7xedm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_umdih"]
 
@@ -20,6 +21,28 @@ shader_parameter/seed = 0.1
 [sub_resource type="LabelSettings" id="LabelSettings_7xedm"]
 font = ExtResource("3_umdih")
 font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tmof"]
+font = ExtResource("4_7xedm")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_umdih"]
+font = ExtResource("4_7xedm")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_ulu7d"]
+font = ExtResource("4_7xedm")
+font_size = 60
+font_color = Color(0, 0.6627451, 0.101960786, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1j5da"]
+font = ExtResource("4_7xedm")
+font_size = 60
+font_color = Color(0.83137256, 0.02745098, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dobm5"]
+font = ExtResource("4_7xedm")
+font_size = 49
 
 [node name="Resumen" type="Node2D" unique_id=658488841]
 script = ExtResource("1_w03nd")
@@ -75,24 +98,43 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2049468304]
 layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1112159861]
+layout_mode = 2
+text = "Items confiscados"
+label_settings = SubResource("LabelSettings_2tmof")
 
 [node name="items" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1866283424]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "personas aprobadas---------------- 6"
+label_settings = SubResource("LabelSettings_umdih")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=624539199]
+layout_mode = 2
+text = "Magos aprobados"
+label_settings = SubResource("LabelSettings_ulu7d")
 
 [node name="aprobados" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1278316662]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "personas aprobadas---------------- 6"
+label_settings = SubResource("LabelSettings_umdih")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2027749974]
+layout_mode = 2
+text = "Magos detenidos"
+label_settings = SubResource("LabelSettings_1j5da")
 
 [node name="detenidos" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1460851607]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "personas aprobadas---------------- 6"
+label_settings = SubResource("LabelSettings_dobm5")
 
 [node name="Button" type="Button" parent="." unique_id=2049767551]
 offset_left = 784.0

@@ -6,9 +6,9 @@ extends Node2D
 
 func _ready() -> void:
 	
-	items.text = "Items confiscados: " + str(Global.items_confiscados)
-	aprobados.text = "Magos aprobados: " + str(Global.characters_aproved)
-	detenidos.text ="Magos detenidos: " +  str(Global.characters_detained)
+	items.text = ", ".join(Global.items_confiscados)
+	aprobados.text = ", ".join(Global.characters_aproved)
+	detenidos.text = ", ".join(Global.characters_detained)
 	
 func _on_button_pressed() -> void:
 	TransitionManager.change_scene("res://escenas/day_scene/nuevo_dia.tscn")

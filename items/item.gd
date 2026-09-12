@@ -60,9 +60,9 @@ func _input(event: InputEvent) -> void:
 
 			# Agregar referencia a instancia de este Item a lista de confiscados
 			if not self in Global.items_confiscados:
-				Global.items_confiscados.append(self)
+				Global.items_confiscados.append(data.item_name)
 				Global.objeto_confiscado.emit()
-				print("Items confiscados: ", Global.items_confiscados)
+				print("items.gd - Items confiscados: ", Global.items_confiscados)
 
 			occupied_socket = drop_socket_ref
 			occupied_socket.get_node("CollisionShape2D").set_deferred("disabled", true)
