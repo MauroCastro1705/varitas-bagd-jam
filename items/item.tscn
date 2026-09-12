@@ -6,12 +6,13 @@
 [node name="Item" type="Node2D" unique_id=1982616256 groups=["items"]]
 script = ExtResource("1_pxpuq")
 data = ExtResource("2_buahv")
-max_size = Vector2(50, 50)
-only_shrink = false
+asset_scale = Vector2(0.15, 0.15)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1060736633]
+unique_name_in_owner = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=993237171]
+unique_name_in_owner = true
 collision_layer = 256
 collision_mask = 512
 

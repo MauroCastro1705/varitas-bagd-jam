@@ -4,14 +4,9 @@ signal tooltip_requested(data: ItemData, item_global_pos: Vector2)
 signal tooltip_hidden()
 
 @export var data: ItemData
+@export var asset_scale: Vector2 = Vector2(0.2, 0.2)
 
 var is_being_dragged: bool = false
-
-
-# NUEVO
-@export var max_size: Vector2 = Vector2(200, 200)
-@export var only_shrink: bool = true
-
 
 # Estado temporal mientras el item está sobre un socket
 var is_hovering_socket: bool = false
@@ -20,36 +15,27 @@ var drop_socket_ref: StaticBody2D = null
 # Estado permanente cuando el item está en un socket
 var occupied_socket: StaticBody2D = null
 
+var base_scale: Vector2 = Vector2(1.0, 1.0)
 var offset: Vector2 = Vector2(0.0, 0.0)
 var particles: CPUParticles2D = null
 
-@onready var sprite: Sprite2D = $Sprite2D
-@onready var collision_shape: CollisionShape2D = $Area2D/CollisionShape2D
+@onready var sprite: Sprite2D = %Sprite2D
+@onready var area_2d: Area2D = %Area2D
+@onready var collision_shape: CollisionShape2D = %Area2D/CollisionShape2D
 
 
 func _ready() -> void:
 	if not data:
 		return
 
+	_init_scale()
+
 	if data.sprite:
 		sprite.texture = data.sprite
-
-		# 1. Calcular el factor de escala manteniendo el aspecto
-		var tex_size: Vector2 = data.sprite.get_size()
-		var scale_factor: float = min(
-			max_size.x / tex_size.x,
-			max_size.y / tex_size.y
-		)
-		if only_shrink:
-			scale_factor = min(scale_factor, 1.0)
-
-		# 2. Aplicar la escala al nodo completo (afecta sprite, área y colisión)
-		self.scale = Vector2(scale_factor, scale_factor)
-
-		# 3. La collision shape usa el tamaño ORIGINAL de la textura,
-		#    porque la escala del nodo se aplica encima automáticamente
-		var rect := RectangleShape2D.new()
-		rect.size = tex_size
+		# Crea un rectángulo que cubre por completo la textura
+		var rect = RectangleShape2D.new()
+		rect.size = data.sprite.get_size()
+		# Y aplica ese rectángulo como forma de colisión
 		collision_shape.shape = rect
 
 	if data.vfx:
@@ -99,6 +85,13 @@ func _physics_process(_delta: float) -> void:
 			target_pos.y = clamp(target_pos.y, limits.position.y, limits.end.y)
 
 		self.global_position = target_pos
+
+
+func _init_scale() -> void:
+	# Store base scale from the sprite (depends on the scale of the assets)
+	base_scale = asset_scale
+	sprite.scale = base_scale
+	area_2d.scale = base_scale
 
 
 func _handle_left_mouse_down() -> void:
